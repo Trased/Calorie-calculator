@@ -1,0 +1,73 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{024FB15F-F45B-40F5-B101-2CAD36F392E5}|IP_PROJECT.csproj|c:\\users\\trase\\desktop\\ip\\proj\\calorie calculator\\forms\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{024FB15F-F45B-40F5-B101-2CAD36F392E5}|IP_PROJECT.csproj|solutionrelative:forms\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024FB15F-F45B-40F5-B101-2CAD36F392E5}|IP_PROJECT.csproj|c:\\users\\trase\\desktop\\ip\\proj\\calorie calculator\\forms\\viewhistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{024FB15F-F45B-40F5-B101-2CAD36F392E5}|IP_PROJECT.csproj|solutionrelative:forms\\viewhistoryform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{024FB15F-F45B-40F5-B101-2CAD36F392E5}|IP_PROJECT.csproj|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\forms\\logfoodform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{024FB15F-F45B-40F5-B101-2CAD36F392E5}|IP_PROJECT.csproj|solutionrelative:forms\\logfoodform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{fabf9319-47eb-497e-b8f6-d9f73fba5f55}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "RegistrationForm.cs",
+              "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Forms\\RegistrationForm.cs",
+              "RelativeDocumentMoniker": "Forms\\RegistrationForm.cs",
+              "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Forms\\RegistrationForm.cs",
+              "RelativeToolTip": "Forms\\RegistrationForm.cs",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAcwDsAAABMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T23:31:43.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ViewHistoryForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Forms\\ViewHistoryForm.cs",
+              "RelativeDocumentMoniker": "Forms\\ViewHistoryForm.cs",
+              "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Forms\\ViewHistoryForm.cs [Design]",
+              "RelativeToolTip": "Forms\\ViewHistoryForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T23:22:47.681Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "LogFoodForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Forms\\LogFoodForm.cs",
+              "RelativeDocumentMoniker": "Forms\\LogFoodForm.cs",
+              "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Forms\\LogFoodForm.cs [Design]",
+              "RelativeToolTip": "Forms\\LogFoodForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-20T17:37:11.334Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
