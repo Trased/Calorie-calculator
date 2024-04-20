@@ -43,9 +43,16 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.errorLabel = new System.Windows.Forms.Label();
+            this.progMenu = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.currentHeightBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentWeightBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ageBox)).BeginInit();
+            this.progMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // currentHeightBox
@@ -237,11 +244,60 @@
             this.errorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             this.errorLabel.UseMnemonic = false;
             // 
+            // progMenu
+            // 
+            this.progMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.progMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.helpToolStripMenuItem});
+            this.progMenu.Location = new System.Drawing.Point(0, 0);
+            this.progMenu.Name = "progMenu";
+            this.progMenu.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.progMenu.Size = new System.Drawing.Size(800, 24);
+            this.progMenu.TabIndex = 37;
+            this.progMenu.Text = "menuStrip1";
+            // 
+            // fileToolStripMenuItem
+            // 
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripSeparator1,
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
+            this.fileToolStripMenuItem.Text = "File";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
+            // 
+            // exitToolStripMenuItem
+            // 
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.exitToolStripMenuItem.Text = "Exit";
+            // 
+            // helpToolStripMenuItem
+            // 
+            this.helpToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.helpToolStripMenuItem.Name = "helpToolStripMenuItem";
+            this.helpToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.helpToolStripMenuItem.Text = "Help";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
+            this.aboutToolStripMenuItem.Text = "About...";
+            // 
             // UpdateProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.progMenu);
             this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -262,6 +318,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.currentHeightBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.currentWeightBox)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ageBox)).EndInit();
+            this.progMenu.ResumeLayout(false);
+            this.progMenu.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -284,5 +342,11 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.MenuStrip progMenu;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem helpToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
