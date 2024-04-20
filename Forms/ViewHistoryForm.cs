@@ -15,6 +15,12 @@ namespace IP_PROJECT
         public ViewHistoryForm()
         {
             InitializeComponent();
+            this.FormClosing += CloseApp;
+        }
+
+        private void CloseApp(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

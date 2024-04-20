@@ -46,7 +46,6 @@
             this.ageBox = new System.Windows.Forms.NumericUpDown();
             this.currentWeightBox = new System.Windows.Forms.NumericUpDown();
             this.currentHeightBox = new System.Windows.Forms.NumericUpDown();
-            this.errorLabel = new System.Windows.Forms.Label();
             this.progMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -277,18 +276,6 @@
             0,
             0});
             // 
-            // errorLabel
-            // 
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(185, 307);
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 27);
-            this.errorLabel.TabIndex = 22;
-            this.errorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.errorLabel.UseMnemonic = false;
-            // 
             // progMenu
             // 
             this.progMenu.ImageScalingSize = new System.Drawing.Size(20, 20);
@@ -343,7 +330,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.progMenu);
-            this.Controls.Add(this.errorLabel);
             this.Controls.Add(this.currentHeightBox);
             this.Controls.Add(this.currentWeightBox);
             this.Controls.Add(this.ageBox);
@@ -394,7 +380,6 @@
         private System.Windows.Forms.NumericUpDown ageBox;
         private System.Windows.Forms.NumericUpDown currentWeightBox;
         private System.Windows.Forms.NumericUpDown currentHeightBox;
-        private System.Windows.Forms.Label errorLabel;
         private System.Windows.Forms.MenuStrip progMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

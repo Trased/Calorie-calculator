@@ -35,14 +35,13 @@
             this.passwordLabel = new System.Windows.Forms.Label();
             this.currentHeightLabel = new System.Windows.Forms.Label();
             this.currentWeightLabel = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.errorLabel = new System.Windows.Forms.Label();
+            this.ageLabel = new System.Windows.Forms.Label();
+            this.newPassword1Box = new System.Windows.Forms.TextBox();
+            this.newPassword1Label = new System.Windows.Forms.Label();
+            this.newPassword0Box = new System.Windows.Forms.TextBox();
+            this.newPassword0Label = new System.Windows.Forms.Label();
+            this.backToMainMenuButton = new System.Windows.Forms.Button();
+            this.updateProfileButton = new System.Windows.Forms.Button();
             this.progMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -164,85 +163,75 @@
             this.currentWeightLabel.TabIndex = 23;
             this.currentWeightLabel.Text = "Current Weight (kg)";
             // 
-            // label1
+            // ageLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(63, 66);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 27);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Age";
+            this.ageLabel.AutoSize = true;
+            this.ageLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ageLabel.Location = new System.Drawing.Point(63, 66);
+            this.ageLabel.Name = "ageLabel";
+            this.ageLabel.Size = new System.Drawing.Size(51, 27);
+            this.ageLabel.TabIndex = 22;
+            this.ageLabel.Text = "Age";
             // 
-            // textBox1
+            // newPassword1Box
             // 
-            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(474, 261);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.PasswordChar = '*';
-            this.textBox1.Size = new System.Drawing.Size(155, 35);
-            this.textBox1.TabIndex = 31;
+            this.newPassword1Box.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassword1Box.Location = new System.Drawing.Point(474, 261);
+            this.newPassword1Box.Name = "newPassword1Box";
+            this.newPassword1Box.PasswordChar = '*';
+            this.newPassword1Box.Size = new System.Drawing.Size(155, 35);
+            this.newPassword1Box.TabIndex = 31;
             // 
-            // label2
+            // newPassword1Label
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(473, 235);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(153, 27);
-            this.label2.TabIndex = 30;
-            this.label2.Text = "New password";
+            this.newPassword1Label.AutoSize = true;
+            this.newPassword1Label.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassword1Label.Location = new System.Drawing.Point(473, 235);
+            this.newPassword1Label.Name = "newPassword1Label";
+            this.newPassword1Label.Size = new System.Drawing.Size(153, 27);
+            this.newPassword1Label.TabIndex = 30;
+            this.newPassword1Label.Text = "New password";
             // 
-            // textBox2
+            // newPassword0Box
             // 
-            this.textBox2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(474, 180);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.PasswordChar = '*';
-            this.textBox2.Size = new System.Drawing.Size(155, 35);
-            this.textBox2.TabIndex = 33;
+            this.newPassword0Box.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassword0Box.Location = new System.Drawing.Point(474, 180);
+            this.newPassword0Box.Name = "newPassword0Box";
+            this.newPassword0Box.PasswordChar = '*';
+            this.newPassword0Box.Size = new System.Drawing.Size(155, 35);
+            this.newPassword0Box.TabIndex = 33;
             // 
-            // label3
+            // newPassword0Label
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(473, 154);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(153, 27);
-            this.label3.TabIndex = 32;
-            this.label3.Text = "New password";
+            this.newPassword0Label.AutoSize = true;
+            this.newPassword0Label.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newPassword0Label.Location = new System.Drawing.Point(473, 154);
+            this.newPassword0Label.Name = "newPassword0Label";
+            this.newPassword0Label.Size = new System.Drawing.Size(153, 27);
+            this.newPassword0Label.TabIndex = 32;
+            this.newPassword0Label.Text = "New password";
             // 
-            // button1
+            // backToMainMenuButton
             // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(68, 366);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(235, 36);
-            this.button1.TabIndex = 34;
-            this.button1.Text = "Back to main menu";
-            this.button1.UseVisualStyleBackColor = true;
+            this.backToMainMenuButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backToMainMenuButton.Location = new System.Drawing.Point(68, 366);
+            this.backToMainMenuButton.Name = "backToMainMenuButton";
+            this.backToMainMenuButton.Size = new System.Drawing.Size(235, 36);
+            this.backToMainMenuButton.TabIndex = 34;
+            this.backToMainMenuButton.Text = "Back to main menu";
+            this.backToMainMenuButton.UseVisualStyleBackColor = true;
+            this.backToMainMenuButton.Click += new System.EventHandler(this.backToMainMenuButton_Click);
             // 
-            // button2
+            // updateProfileButton
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(474, 366);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(201, 36);
-            this.button2.TabIndex = 35;
-            this.button2.Text = "Update profile";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // errorLabel
-            // 
-            this.errorLabel.AutoSize = true;
-            this.errorLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.errorLabel.ForeColor = System.Drawing.Color.Red;
-            this.errorLabel.Location = new System.Drawing.Point(155, 320);
-            this.errorLabel.Name = "errorLabel";
-            this.errorLabel.Size = new System.Drawing.Size(0, 27);
-            this.errorLabel.TabIndex = 36;
-            this.errorLabel.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.errorLabel.UseMnemonic = false;
+            this.updateProfileButton.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateProfileButton.Location = new System.Drawing.Point(474, 366);
+            this.updateProfileButton.Name = "updateProfileButton";
+            this.updateProfileButton.Size = new System.Drawing.Size(201, 36);
+            this.updateProfileButton.TabIndex = 35;
+            this.updateProfileButton.Text = "Update profile";
+            this.updateProfileButton.UseVisualStyleBackColor = true;
+            this.updateProfileButton.Click += new System.EventHandler(this.updateProfileButton_Click);
             // 
             // progMenu
             // 
@@ -298,13 +287,12 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.progMenu);
-            this.Controls.Add(this.errorLabel);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.updateProfileButton);
+            this.Controls.Add(this.backToMainMenuButton);
+            this.Controls.Add(this.newPassword0Box);
+            this.Controls.Add(this.newPassword0Label);
+            this.Controls.Add(this.newPassword1Box);
+            this.Controls.Add(this.newPassword1Label);
             this.Controls.Add(this.currentHeightBox);
             this.Controls.Add(this.currentWeightBox);
             this.Controls.Add(this.ageBox);
@@ -312,7 +300,7 @@
             this.Controls.Add(this.passwordLabel);
             this.Controls.Add(this.currentHeightLabel);
             this.Controls.Add(this.currentWeightLabel);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ageLabel);
             this.Name = "UpdateProfileForm";
             this.Text = "Calorie calculator";
             ((System.ComponentModel.ISupportInitialize)(this.currentHeightBox)).EndInit();
@@ -334,14 +322,13 @@
         private System.Windows.Forms.Label passwordLabel;
         private System.Windows.Forms.Label currentHeightLabel;
         private System.Windows.Forms.Label currentWeightLabel;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label errorLabel;
+        private System.Windows.Forms.Label ageLabel;
+        private System.Windows.Forms.TextBox newPassword1Box;
+        private System.Windows.Forms.Label newPassword1Label;
+        private System.Windows.Forms.TextBox newPassword0Box;
+        private System.Windows.Forms.Label newPassword0Label;
+        private System.Windows.Forms.Button backToMainMenuButton;
+        private System.Windows.Forms.Button updateProfileButton;
         private System.Windows.Forms.MenuStrip progMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

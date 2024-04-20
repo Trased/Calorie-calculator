@@ -44,63 +44,61 @@ namespace IP_PROJECT
 
         private void registerButton_Click(object sender, EventArgs e)
         {
-            errorLabel.Text = "";
-
             if (string.IsNullOrWhiteSpace(firstNameBox.Text) || !IsOnlyLetters(firstNameBox.Text))
             {
-                errorLabel.Text = "Please enter a valid first name (only letters).";
+                MessageBox.Show("Please enter a valid first name (only letters).");
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(lastNameBox.Text) || !IsOnlyLetters(lastNameBox.Text))
             {
-                errorLabel.Text = "Please enter a valid last name (only letters).";
+                MessageBox.Show("Please enter a valid last name (only letters).");
                 return;
             }
 
             int age;
             if (!int.TryParse(ageBox.Text, out age) || age <= 0 || age == 1)
             {
-                errorLabel.Text = "Please enter a valid age.";
+                MessageBox.Show("Please enter a valid age.");
                 return;
             }
 
             string gender = genderBox.Text;
             if (string.IsNullOrWhiteSpace(gender) || (gender != "Male" && gender != "Female" && gender != "Other"))
             {
-                errorLabel.Text = "Please select a valid gender (Male, Female, or Other).";
+                MessageBox.Show("Please select a valid gender (Male, Female, or Other).");
                 return;
             }
 
             double weight;
             if (!double.TryParse(currentWeightBox.Text, out weight) || weight <= 0 || weight == 1.0)
             {
-                errorLabel.Text = "Please enter a valid weight.";
+                MessageBox.Show("Please enter a valid weight.");
                 return;
             }
 
             int height;
             if (!int.TryParse(currentHeightBox.Text, out height) || height <= 0 || height == 1)
             {
-                errorLabel.Text = "Please enter a valid height.";
+                MessageBox.Show("Please enter a valid height.");
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(usernameBox.Text))
             {
-                errorLabel.Text = "Please enter a username.";
+                MessageBox.Show("Please enter a username.");
                 return;
             }
 
             if (string.IsNullOrWhiteSpace(passwordBox.Text))
             {
-                errorLabel.Text = "Please enter a password.";
+                MessageBox.Show("Please enter a password.");
                 return;
             }
 
             if (IsUsernameTaken(usernameBox.Text))
             {
-                errorLabel.Text = "Username is already taken.";
+                MessageBox.Show("Username is already taken.");
                 return;
             }
 

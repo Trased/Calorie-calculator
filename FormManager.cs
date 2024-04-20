@@ -16,6 +16,8 @@ namespace IP_PROJECT
         private ViewHistoryForm _viewHistoryForm;
         private LogFoodForm _logFoodForm;
 
+        private int currentUserID;
+
         private FormManager()
         {
             _logInForm = new LogInForm();
@@ -39,6 +41,8 @@ namespace IP_PROJECT
             }
         }
 
+        public int CurrentUserID { get => currentUserID; set => currentUserID = value; }
+
         public LogInForm StartApplication()
         {
             return _logInForm;
@@ -46,6 +50,7 @@ namespace IP_PROJECT
 
         public void ShowLogInForm()
         {
+            _logInForm.ResetForm();
             _logInForm.Show();
         }
 
@@ -76,6 +81,7 @@ namespace IP_PROJECT
 
         public void ShowUpdateProfileForm()
         {
+            _updateProfileForm.ResetForm();
             _updateProfileForm.Show();
         }
         public void HideUpdateProfileForm()

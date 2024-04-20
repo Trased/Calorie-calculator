@@ -29,23 +29,25 @@ namespace IP_PROJECT
                 string username = usernameBox.Text;
                 string password = FormManager.Instance.CalculateSHA256(passwordBox.Text);
 
-                string query = "SELECT COUNT(*) FROM Person WHERE username = @username AND password = @password";
+                string query = "SELECT id, COUNT(*) as count FROM Person WHERE username = @username AND password = @password";
 
                 using (SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@username", username);
                     command.Parameters.AddWithValue("@password", password);
 
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-
-                    if (count > 0)
+                    using (SQLiteDataReader reader = command.ExecuteReader())
                     {
-                        FormManager.Instance.HideLogInForm();
-                        FormManager.Instance.ShowMainForm();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Invalid username or password. Please try again.");
+                        if (reader.Read() && Convert.ToInt32(reader["count"]) > 0)
+                        {
+                            FormManager.Instance.CurrentUserID = Convert.ToInt32(reader["id"]);
+                            FormManager.Instance.HideLogInForm();
+                            FormManager.Instance.ShowMainForm();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Invalid username or password. Please try again.");
+                        }
                     }
                 }
             }
@@ -55,6 +57,12 @@ namespace IP_PROJECT
         {
             FormManager.Instance.HideLogInForm();
             FormManager.Instance.ShowRegistrationForm();
+        }
+
+        public void ResetForm()
+        {
+            this.usernameBox.Text = "";
+            this.passwordBox.Text = "";
         }
     }
 }

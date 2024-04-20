@@ -51,6 +51,7 @@
             this.logFoodButton.TabIndex = 0;
             this.logFoodButton.Text = "Log food";
             this.logFoodButton.UseVisualStyleBackColor = true;
+            this.logFoodButton.Click += new System.EventHandler(this.logFoodButton_Click);
             // 
             // viewHistoryButton
             // 
@@ -62,6 +63,7 @@
             this.viewHistoryButton.TabIndex = 1;
             this.viewHistoryButton.Text = "View history";
             this.viewHistoryButton.UseVisualStyleBackColor = true;
+            this.viewHistoryButton.Click += new System.EventHandler(this.viewHistoryButton_Click);
             // 
             // updateProfileButton
             // 
@@ -73,6 +75,7 @@
             this.updateProfileButton.TabIndex = 2;
             this.updateProfileButton.Text = "Update profile";
             this.updateProfileButton.UseVisualStyleBackColor = true;
+            this.updateProfileButton.Click += new System.EventHandler(this.updateProfileButton_Click);
             // 
             // logOutButton
             // 
@@ -84,6 +87,7 @@
             this.logOutButton.TabIndex = 3;
             this.logOutButton.Text = "Log out";
             this.logOutButton.UseVisualStyleBackColor = true;
+            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
             // 
             // progMenu
             // 
