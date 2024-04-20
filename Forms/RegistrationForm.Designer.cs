@@ -181,6 +181,7 @@
             this.registerButton.TabIndex = 16;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // logInButtton
             // 
@@ -191,6 +192,7 @@
             this.logInButtton.TabIndex = 17;
             this.logInButtton.Text = "Back to log in";
             this.logInButtton.UseVisualStyleBackColor = true;
+            this.logInButtton.Click += new System.EventHandler(this.logInButtton_Click);
             // 
             // genderBox
             // 

@@ -16,7 +16,8 @@ namespace IP_PROJECT
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LogInForm());
+            FormManager formManager = FormManager.Instance;
+            Application.Run(formManager.StartApplication());
         }
     }
 }
