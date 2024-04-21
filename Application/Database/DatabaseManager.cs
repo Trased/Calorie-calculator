@@ -68,7 +68,7 @@ namespace IP_PROJECT
                     command.Parameters.AddWithValue("@firstName", firstName);
                     command.Parameters.AddWithValue("@lastName", lastName);
                     command.Parameters.AddWithValue("@age", age);
-                    command.Parameters.AddWithValue("@gender", gender[0]);
+                    command.Parameters.AddWithValue("@gender", gender[0].ToString());
                     command.Parameters.AddWithValue("@height", height);
                     command.ExecuteNonQuery();
                 }
