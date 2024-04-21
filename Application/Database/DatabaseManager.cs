@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace IP_PROJECT
 {
@@ -26,6 +27,34 @@ namespace IP_PROJECT
             }
         }
 
+        public void SetCredentials()
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+            {
+                connection.Open();
+                string query = @"SELECT pd.first_name || ' ' || pd.last_name as name, pd.age as age, pd.gender as gender, pd.height as height, w.weight as weight
+                                 FROM PersonData pd, Weight w
+                                 WHERE pd.id = @id AND pd.id = w.id";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", UserData.Instance.Id);
+
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            UserData.Instance.InitializeUserDataOnLogIn(
+                            Convert.ToInt32(reader["age"]),
+                            Convert.ToInt32(reader["height"]),
+                            Convert.ToInt32(reader["weight"]),
+                            Convert.ToString(reader["name"]),
+                            Convert.ToString(reader["gender"])
+                            );
+                        }
+                    }
+                }
+            }
+        }
         public void LogIn(string username, string password)
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -45,6 +74,7 @@ namespace IP_PROJECT
                         if (reader.Read() && Convert.ToInt32(reader["count"]) > 0)
                         {
                             UserData.Instance.Id = Convert.ToInt32(reader["id"]);
+                            SetCredentials();
                             FormManager.Instance.HideLogInForm();
                             FormManager.Instance.ShowMainForm();
                         }
@@ -62,9 +92,35 @@ namespace IP_PROJECT
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
             {
                 connection.Open();
-                string insertPersonDataQuery = "INSERT INTO PersonData (first_name, last_name, age, gender, height) VALUES (@firstName, @lastName, @age, @gender, @height)";
+                string insertPersonQuery = "INSERT INTO Person (username, password) VALUES (@username, @password)";
+                using (SQLiteCommand command = new SQLiteCommand(insertPersonQuery, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    command.Parameters.AddWithValue("@password", UserData.Instance.CalculatePasswordSHA(password));
+                    command.ExecuteNonQuery();
+                }
+            }
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+            {
+                connection.Open();
+                int personID = 0;
+                string getPersonID = "SELECT id FROM Person WHERE username = @username";
+                using (SQLiteCommand command = new SQLiteCommand(getPersonID, connection))
+                {
+                    command.Parameters.AddWithValue("@username", username);
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            personID = Convert.ToInt32(reader["id"]);
+                        }
+                    }
+                }
+
+                string insertPersonDataQuery = "INSERT INTO PersonData (id, first_name, last_name, age, gender, height) VALUES (@id, @firstName, @lastName, @age, @gender, @height)";
                 using (SQLiteCommand command = new SQLiteCommand(insertPersonDataQuery, connection))
                 {
+                    command.Parameters.AddWithValue("@id", personID);
                     command.Parameters.AddWithValue("@firstName", firstName);
                     command.Parameters.AddWithValue("@lastName", lastName);
                     command.Parameters.AddWithValue("@age", age);
@@ -73,19 +129,12 @@ namespace IP_PROJECT
                     command.ExecuteNonQuery();
                 }
 
-                string insertWeightQuery = "INSERT INTO Weight (date, weight) VALUES (@date, @weight)";
+                string insertWeightQuery = "INSERT INTO Weight (id, date, weight) VALUES (@id, @date, @weight)";
                 using (SQLiteCommand command = new SQLiteCommand(insertWeightQuery, connection))
                 {
+                    command.Parameters.AddWithValue("@id", personID);
                     command.Parameters.AddWithValue("@date", DateTime.Now.Date);
                     command.Parameters.AddWithValue("@weight", weight);
-                    command.ExecuteNonQuery();
-                }
-
-                string insertPersonQuery = "INSERT INTO Person (username, password) VALUES (@username, @password)";
-                using (SQLiteCommand command = new SQLiteCommand(insertPersonQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", UserData.Instance.CalculatePasswordSHA(password));
                     command.ExecuteNonQuery();
                 }
             }

@@ -1,4 +1,5 @@
-﻿namespace IP_PROJECT
+﻿using System;
+namespace IP_PROJECT
 {
     partial class LogFoodForm
     {
@@ -72,9 +73,11 @@
             // 
             this.dateTimeInput.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeInput.Location = new System.Drawing.Point(87, 159);
+            this.dateTimeInput.MaxDate = DateTime.Today;
             this.dateTimeInput.Name = "dateTimeInput";
             this.dateTimeInput.Size = new System.Drawing.Size(394, 35);
             this.dateTimeInput.TabIndex = 2;
+            this.dateTimeInput.Value = new System.DateTime(2024, 4, 21, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -108,7 +111,7 @@
             // 
             this.currentDateDisplayLabel.AutoSize = true;
             this.currentDateDisplayLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.currentDateDisplayLabel.Location = new System.Drawing.Point(157, 32);
+            this.currentDateDisplayLabel.Location = new System.Drawing.Point(150, 32);
             this.currentDateDisplayLabel.Name = "currentDateDisplayLabel";
             this.currentDateDisplayLabel.Size = new System.Drawing.Size(0, 27);
             this.currentDateDisplayLabel.TabIndex = 7;
@@ -117,7 +120,7 @@
             // 
             this.calorieIntakeDisplayLabel.AutoSize = true;
             this.calorieIntakeDisplayLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calorieIntakeDisplayLabel.Location = new System.Drawing.Point(672, 32);
+            this.calorieIntakeDisplayLabel.Location = new System.Drawing.Point(703, 32);
             this.calorieIntakeDisplayLabel.Name = "calorieIntakeDisplayLabel";
             this.calorieIntakeDisplayLabel.Size = new System.Drawing.Size(0, 27);
             this.calorieIntakeDisplayLabel.TabIndex = 9;
@@ -126,11 +129,11 @@
             // 
             this.calorieIntakeLabel.AutoSize = true;
             this.calorieIntakeLabel.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.calorieIntakeLabel.Location = new System.Drawing.Point(492, 32);
+            this.calorieIntakeLabel.Location = new System.Drawing.Point(392, 32);
             this.calorieIntakeLabel.Name = "calorieIntakeLabel";
-            this.calorieIntakeLabel.Size = new System.Drawing.Size(153, 27);
+            this.calorieIntakeLabel.Size = new System.Drawing.Size(298, 27);
             this.calorieIntakeLabel.TabIndex = 8;
-            this.calorieIntakeLabel.Text = "Calorie intake:";
+            this.calorieIntakeLabel.Text = "Recommended calorie intake:";
             // 
             // searchOutputBox
             // 
@@ -151,6 +154,7 @@
             this.backToMainMenuButton.TabIndex = 11;
             this.backToMainMenuButton.Text = "Back to main menu";
             this.backToMainMenuButton.UseVisualStyleBackColor = true;
+            this.backToMainMenuButton.Click += new System.EventHandler(this.backToMainMenuButton_Click);
             // 
             // progMenu
             // 
@@ -177,13 +181,13 @@
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(177, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(131, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
             // helpToolStripMenuItem
@@ -197,7 +201,7 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(116, 22);
             this.aboutToolStripMenuItem.Text = "About...";
             // 
             // LogFoodForm

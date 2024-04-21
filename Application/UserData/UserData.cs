@@ -53,9 +53,13 @@ namespace IP_PROJECT
             }
         }
 
-        public void InitializeUserDataOnLogIn()
+        public void InitializeUserDataOnLogIn(int age, int height, double weight, string name, string gender)
         {
-
+            this._age = age;
+            this._height = height;
+            this._weight = weight;
+            this._gender = gender;
+            this._name = name;
         }
     }
 }

@@ -24,12 +24,34 @@ namespace IP_PROJECT
             Application.Exit();
         }
 
-        /*/
-        public void ShowInitialData()
+        private void backToMainMenuButton_Click(object sender, EventArgs e)
         {
-            ICalorieIntake strategy;
+            FormManager.Instance.HideLogFoodForm();
+            FormManager.Instance.ShowMainForm();
+        }
+
+        public  void ShowInitialData()
+        {
+            currentDateDisplayLabel.Text = DateTime.Now.Date.ToShortDateString();
+            currentDateDisplayLabel.Refresh();
+            ICalorieIntake strategy = null;
+            if(UserData.Instance.Gender == "M")
+            {
+                strategy = new MaleCalorieIntake();
+            }
+            else if(UserData.Instance.Gender == "F")
+            {
+                strategy = new FemaleCalorieIntake();
+            }
+            CalorieIntakeCalculator calculator = new CalorieIntakeCalculator(strategy);
+            calorieIntakeDisplayLabel.Text = calculator.CalculateRecommendedCalorie(
+                UserData.Instance.Age,
+                UserData.Instance.Height, 
+                UserData.Instance.Weight)
+                .ToString();
+            calorieIntakeDisplayLabel.Refresh();
+             
 
         }
-        /*/
     }
 }

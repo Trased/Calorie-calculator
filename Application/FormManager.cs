@@ -97,6 +97,7 @@ namespace IP_PROJECT
         public void ShowLogFoodForm()
         {
             _logFoodForm.Show();
+            _logFoodForm.ShowInitialData();
         }
         public void HideLogFoodForm()
         {
