@@ -9,7 +9,7 @@ CREATE TABLE PersonData (
     first_name TEXT CHECK(first_name GLOB '[a-zA-Z]*'),
     last_name TEXT CHECK(last_name GLOB '[a-zA-Z]*'),
     age INTEGER CHECK(age >= 0),
-    gender TEXT CHECK(gender IN ('M', 'F', 'O')),
+    gender TEXT CHECK(gender IN ('M', 'F')),
     height INTEGER CHECK(height >= 0),
     FOREIGN KEY (id) REFERENCES Person(id)
 );

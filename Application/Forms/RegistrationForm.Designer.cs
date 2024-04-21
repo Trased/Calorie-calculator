@@ -199,8 +199,7 @@
             this.genderBox.FormattingEnabled = true;
             this.genderBox.Items.AddRange(new object[] {
             "Male",
-            "Female",
-            "Other"});
+            "Female"});
             this.genderBox.Location = new System.Drawing.Point(145, 260);
             this.genderBox.Name = "genderBox";
             this.genderBox.Size = new System.Drawing.Size(155, 35);

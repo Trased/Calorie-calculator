@@ -66,6 +66,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database\DatabaseManager.cs" />
     <Compile Include="FormManager.cs" />
     <Compile Include="Forms\LogFoodForm.cs">
       <SubType>Form</SubType>
@@ -105,6 +106,10 @@
     <Compile Include="Forms\ViewHistoryForm.Designer.cs">
       <DependentUpon>ViewHistoryForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Strategy\CalorieIntakeCalculator.cs" />
+    <Compile Include="Strategy\ICalorieIntake.cs" />
+    <Compile Include="Strategy\CalorieIntakeManager.cs" />
+    <Compile Include="UserData\UserData.cs" />
     <EmbeddedResource Include="Forms\LogFoodForm.resx">
       <DependentUpon>LogFoodForm.cs</DependentUpon>
     </EmbeddedResource>

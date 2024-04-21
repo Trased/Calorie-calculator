@@ -19,6 +19,12 @@ namespace IP_PROJECT
             InitializeComponent();
             this.FormClosing += CloseApp;
         }
+
+        private void CloseApp(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
         public void ResetForm()
         {
             this.genderBox.Text = string.Empty;
@@ -29,11 +35,6 @@ namespace IP_PROJECT
             this.currentWeightBox.Text = "1.0";
             this.usernameBox.Text = string.Empty;
             this.passwordBox.Text = string.Empty;
-        }
-
-        private void CloseApp(object sender, FormClosingEventArgs e)
-        {
-            Application.Exit();
         }
 
         private void logInButtton_Click(object sender, EventArgs e)
@@ -64,7 +65,7 @@ namespace IP_PROJECT
             }
 
             string gender = genderBox.Text;
-            if (string.IsNullOrWhiteSpace(gender) || (gender != "Male" && gender != "Female" && gender != "Other"))
+            if (string.IsNullOrWhiteSpace(gender) || (gender != "Male" && gender != "Female"))
             {
                 MessageBox.Show("Please select a valid gender (Male, Female, or Other).");
                 return;
@@ -96,13 +97,13 @@ namespace IP_PROJECT
                 return;
             }
 
-            if (IsUsernameTaken(usernameBox.Text))
+            if (DatabaseManager.Instance.IsUsernameTaken(usernameBox.Text))
             {
                 MessageBox.Show("Username is already taken.");
                 return;
             }
 
-            InsertDataIntoDatabase(firstNameBox.Text, lastNameBox.Text, age, gender, height, weight, usernameBox.Text, passwordBox.Text);
+            DatabaseManager.Instance.Register(firstNameBox.Text, lastNameBox.Text, age, gender, height, weight, usernameBox.Text, passwordBox.Text);
 
             MessageBox.Show("Registration successful!");
             FormManager.Instance.HideRegistrationForm();
@@ -113,83 +114,5 @@ namespace IP_PROJECT
         {
             return str.All(char.IsLetter);
         }
-
-        private bool IsUsernameTaken(string username)
-        {
-            string connectionString = "Data Source=calorie_calculator.db;Version=3;";
-            bool isTaken = false;
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-
-                string query = "SELECT COUNT(*) FROM Person WHERE username = @username";
-
-                using (SQLiteCommand command = new SQLiteCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@username", username);
-
-                    int count = Convert.ToInt32(command.ExecuteScalar());
-                    if (count > 0)
-                    {
-                        isTaken = true;
-                    }
-                }
-            }
-
-            return isTaken;
-        }
-
-        private void InsertDataIntoDatabase(string firstName, string lastName, int age, string gender, int height, double weight, string username, string password)
-        {
-            string connectionString = "Data Source=calorie_calculator.db;Version=3;";
-
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
-            {
-                connection.Open();
-                string actualGender = "";
-                switch (gender)
-                {
-                    case "Male":
-                        actualGender = "M";
-                        break;
-                    case "Female":
-                        actualGender = "F";
-                        break;
-                    case "Other":
-                        actualGender = "O";
-                        break;
-
-                }
-                string insertPersonDataQuery = "INSERT INTO PersonData (first_name, last_name, age, gender, height) VALUES (@firstName, @lastName, @age, @gender, @height)";
-                using (SQLiteCommand command = new SQLiteCommand(insertPersonDataQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@firstName", firstName);
-                    command.Parameters.AddWithValue("@lastName", lastName);
-                    command.Parameters.AddWithValue("@age", age);
-                    command.Parameters.AddWithValue("@gender", actualGender);
-                    command.Parameters.AddWithValue("@height", height);
-                    command.ExecuteNonQuery();
-                }
-
-                string insertWeightQuery = "INSERT INTO Weight (date, weight) VALUES (@date, @weight)";
-                using (SQLiteCommand command = new SQLiteCommand(insertWeightQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@date", DateTime.Now.Date);
-                    command.Parameters.AddWithValue("@weight", weight);
-                    command.ExecuteNonQuery();
-                }
-
-                string insertPersonQuery = "INSERT INTO Person (username, password) VALUES (@username, @password)";
-                using (SQLiteCommand command = new SQLiteCommand(insertPersonQuery, connection))
-                {
-                    command.Parameters.AddWithValue("@username", username);
-                    command.Parameters.AddWithValue("@password", FormManager.Instance.CalculateSHA256(password));
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
-
-
     }
 }

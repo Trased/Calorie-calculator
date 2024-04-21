@@ -1,4 +1,5 @@
-﻿using System;
+﻿using IP_PROJECT.Strategy;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,5 +23,13 @@ namespace IP_PROJECT
         {
             Application.Exit();
         }
+
+        /*/
+        public void ShowInitialData()
+        {
+            ICalorieIntake strategy;
+
+        }
+        /*/
     }
 }

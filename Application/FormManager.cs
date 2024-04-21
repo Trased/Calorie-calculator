@@ -7,7 +7,7 @@ namespace IP_PROJECT
 {
     public class FormManager
     {
-        private static FormManager instance;
+        private static FormManager _instance;
 
         private LogInForm _logInForm;
         private MainForm _mainForm;
@@ -15,8 +15,6 @@ namespace IP_PROJECT
         private UpdateProfileForm _updateProfileForm;
         private ViewHistoryForm _viewHistoryForm;
         private LogFoodForm _logFoodForm;
-
-        private int currentUserID;
 
         private FormManager()
         {
@@ -33,15 +31,13 @@ namespace IP_PROJECT
         {
             get
             {
-                if (instance == null)
+                if (_instance == null)
                 {
-                    instance = new FormManager();
+                    _instance = new FormManager();
                 }
-                return instance;
+                return _instance;
             }
         }
-
-        public int CurrentUserID { get => currentUserID; set => currentUserID = value; }
 
         public LogInForm StartApplication()
         {
@@ -105,22 +101,6 @@ namespace IP_PROJECT
         public void HideLogFoodForm()
         {
             _logFoodForm.Hide();
-        }
-
-        public string CalculateSHA256(string input)
-        {
-            using (SHA256 sha256Hash = SHA256.Create())
-            {
-                byte[] data = sha256Hash.ComputeHash(Encoding.UTF8.GetBytes(input));
-
-                StringBuilder builder = new StringBuilder();
-                for (int i = 0; i < data.Length; i++)
-                {
-                    builder.Append(data[i].ToString("x2"));
-                }
-
-                return builder.ToString();
-            }
         }
     }
 }
