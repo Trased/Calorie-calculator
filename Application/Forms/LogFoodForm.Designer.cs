@@ -58,6 +58,7 @@ namespace IP_PROJECT
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // proceedButton
             // 
@@ -68,12 +69,13 @@ namespace IP_PROJECT
             this.proceedButton.TabIndex = 1;
             this.proceedButton.Text = "Proceed";
             this.proceedButton.UseVisualStyleBackColor = true;
+            this.proceedButton.Click += new System.EventHandler(this.proceedButton_Click);
             // 
             // dateTimeInput
             // 
             this.dateTimeInput.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeInput.Location = new System.Drawing.Point(87, 159);
-            this.dateTimeInput.MaxDate = DateTime.Today;
+            this.dateTimeInput.MaxDate = new System.DateTime(2024, 4, 24, 0, 0, 0, 0);
             this.dateTimeInput.Name = "dateTimeInput";
             this.dateTimeInput.Size = new System.Drawing.Size(394, 35);
             this.dateTimeInput.TabIndex = 2;
@@ -83,7 +85,7 @@ namespace IP_PROJECT
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(83, 124);
+            this.label1.Location = new System.Drawing.Point(90, 134);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 23);
             this.label1.TabIndex = 3;
@@ -140,9 +142,9 @@ namespace IP_PROJECT
             this.searchOutputBox.Font = new System.Drawing.Font("Times New Roman", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.searchOutputBox.FormattingEnabled = true;
             this.searchOutputBox.ItemHeight = 21;
-            this.searchOutputBox.Location = new System.Drawing.Point(87, 230);
+            this.searchOutputBox.Location = new System.Drawing.Point(17, 230);
             this.searchOutputBox.Name = "searchOutputBox";
-            this.searchOutputBox.Size = new System.Drawing.Size(530, 151);
+            this.searchOutputBox.Size = new System.Drawing.Size(771, 151);
             this.searchOutputBox.TabIndex = 10;
             // 
             // backToMainMenuButton

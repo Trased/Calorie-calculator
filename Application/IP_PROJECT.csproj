@@ -42,6 +42,9 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
@@ -66,8 +69,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Database\DatabaseManager.cs" />
-    <Compile Include="FormManager.cs" />
+    <Compile Include="Managers\ParserManager.cs" />
+    <Compile Include="Managers\DatabaseManager.cs" />
+    <Compile Include="Managers\FormManager.cs" />
     <Compile Include="Forms\LogFoodForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +90,7 @@
     <Compile Include="Forms\MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pojo\Nutrition.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Forms\RegistrationForm.cs">
@@ -109,7 +114,7 @@
     <Compile Include="Strategy\CalorieIntakeCalculator.cs" />
     <Compile Include="Strategy\ICalorieIntake.cs" />
     <Compile Include="Strategy\CalorieIntakeManager.cs" />
-    <Compile Include="UserData\UserData.cs" />
+    <Compile Include="Pojo\UserData.cs" />
     <EmbeddedResource Include="Forms\LogFoodForm.resx">
       <DependentUpon>LogFoodForm.cs</DependentUpon>
     </EmbeddedResource>

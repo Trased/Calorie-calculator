@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace IP_PROJECT
@@ -55,6 +56,7 @@ namespace IP_PROJECT
                 }
             }
         }
+       
         public void LogIn(string username, string password)
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -230,8 +232,7 @@ namespace IP_PROJECT
         
         public void CheckPassword(string insertedCurrentPassword, string insertedNewPassword)
         {
-            string connectionString = "Data Source=calorie_calculator.db;Version=3;";
-            using (SQLiteConnection connection = new SQLiteConnection(connectionString))
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
             {
                 connection.Open();
                 string query = "SELECT password FROM Person WHERE id = @id";
@@ -263,6 +264,31 @@ namespace IP_PROJECT
                     }
                 }
             }
+        }
+
+        public bool SaveFoodToDatabase(DateTime date,string name, double calories, double servingSize, double fat, double protein, double carbo)
+        {
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+            {
+                string query = @"INSERT INTO Logs (id, date, serving_size, food_name, protein, carbo, fat) 
+                     VALUES (@id, @date, @serving_size, @food_name, @protein, @carbo, @fat) ";
+
+                connection.Open();
+                using(SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@id", UserData.Instance.Id);
+                    command.Parameters.AddWithValue("@date", date);
+                    command.Parameters.AddWithValue("@serving_size", servingSize);
+                    command.Parameters.AddWithValue("@food_name", name);
+                    command.Parameters.AddWithValue("@protein", protein);
+                    command.Parameters.AddWithValue("@carbo", carbo);
+                    command.Parameters.AddWithValue("@fat", fat);
+
+                    int rowsAffected = command.ExecuteNonQuery();
+                    return rowsAffected > 0;
+                }
+            }
+
         }
     }
 }

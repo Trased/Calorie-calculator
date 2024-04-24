@@ -17,17 +17,17 @@ CREATE TABLE PersonData (
 CREATE TABLE Weight (
     id INTEGER,
     date DATE,
-    weight INTEGER CHECK(weight >= 0),
+    weight REAL CHECK(weight >= 0),
     FOREIGN KEY (id) REFERENCES Person(id)
 );
 
 CREATE TABLE Logs (
     id INTEGER,
     date DATE,
-    type TEXT CHECK(type IN ('snack', 'breakfast', 'lunch', 'dinner')),
+    serving_size REAL CHECK(serving_size >= 0),
     food_name TEXT,
-    protein INTEGER CHECK(protein >= 0),
-    carbo INTEGER CHECK(carbo >= 0),
-    fat INTEGER CHECK(fat >= 0),
+    protein REAL CHECK(protein >= 0),
+    carbo REAL CHECK(carbo >= 0),
+    fat REAL CHECK(fat >= 0),
     FOREIGN KEY (id) REFERENCES Person(id)
 );
