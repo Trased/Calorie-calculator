@@ -24,6 +24,7 @@ CREATE TABLE Weight (
 CREATE TABLE Logs (
     id INTEGER,
     date DATE,
+    calories INTEGER CHECK(calories >= 0),
     serving_size REAL CHECK(serving_size >= 0),
     food_name TEXT,
     protein REAL CHECK(protein >= 0),

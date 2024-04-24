@@ -270,14 +270,15 @@ namespace IP_PROJECT
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
             {
-                string query = @"INSERT INTO Logs (id, date, serving_size, food_name, protein, carbo, fat) 
-                     VALUES (@id, @date, @serving_size, @food_name, @protein, @carbo, @fat) ";
+                string query = @"INSERT INTO Logs (id, date, calories, serving_size, food_name, protein, carbo, fat) 
+                     VALUES (@id, @date, @calories, @serving_size, @food_name, @protein, @carbo, @fat) ";
 
                 connection.Open();
                 using(SQLiteCommand command = new SQLiteCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@id", UserData.Instance.Id);
                     command.Parameters.AddWithValue("@date", date);
+                    command.Parameters.AddWithValue("@calories", calories);
                     command.Parameters.AddWithValue("@serving_size", servingSize);
                     command.Parameters.AddWithValue("@food_name", name);
                     command.Parameters.AddWithValue("@protein", protein);
@@ -289,6 +290,64 @@ namespace IP_PROJECT
                 }
             }
 
+        }
+    
+        public List<(DateTime, double)> GetWeightHistory()
+        {
+            List<(DateTime, double)> weightHistory = new List<(DateTime, double)>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+            {
+                string query = @"SELECT date, weight FROM Weight WHERE id = @userId ORDER BY date";
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@userId", UserData.Instance.Id);
+
+                    connection.Open();
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            DateTime date = reader.GetDateTime(0);
+                            double weight = reader.GetDouble(1);
+                            weightHistory.Add((date, weight));
+                        }
+                    }
+                }
+            }
+            return weightHistory;
+        }
+
+        public Dictionary<DateTime, double> GetCaloriesConsumedPerDay()
+        {
+            Dictionary<DateTime, double> caloriesPerDay = new Dictionary<DateTime, double>();
+
+            using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
+            {
+                string query = @"SELECT date, SUM(calories) AS totalCalories
+                         FROM Logs
+                         WHERE id = @userId
+                         GROUP BY date
+                         ORDER BY date";
+
+                using (SQLiteCommand command = new SQLiteCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@userId", UserData.Instance.Id);
+
+                    connection.Open();
+                    using (SQLiteDataReader reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            DateTime date = reader.GetDateTime(0);
+                            double totalCalories = reader.GetDouble(1);
+                            caloriesPerDay[date] = totalCalories;
+                        }
+                    }
+                }
+            }
+
+            return caloriesPerDay;
         }
     }
 }

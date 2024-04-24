@@ -34,14 +34,14 @@
             this.calorieHistoryButton = new System.Windows.Forms.Button();
             this.weightHistoryButton = new System.Windows.Forms.Button();
             this.backToMainMenuButton = new System.Windows.Forms.Button();
-            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.progressChart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.progMenu = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressChart)).BeginInit();
             this.progMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +54,7 @@
             this.calorieHistoryButton.TabIndex = 0;
             this.calorieHistoryButton.Text = "Calorie history";
             this.calorieHistoryButton.UseVisualStyleBackColor = true;
+            this.calorieHistoryButton.Click += new System.EventHandler(this.calorieHistoryButton_Click);
             // 
             // weightHistoryButton
             // 
@@ -64,6 +65,7 @@
             this.weightHistoryButton.TabIndex = 1;
             this.weightHistoryButton.Text = "Weight history";
             this.weightHistoryButton.UseVisualStyleBackColor = true;
+            this.weightHistoryButton.Click += new System.EventHandler(this.weightHistoryButton_Click);
             // 
             // backToMainMenuButton
             // 
@@ -74,23 +76,24 @@
             this.backToMainMenuButton.TabIndex = 2;
             this.backToMainMenuButton.Text = "Back to main menu";
             this.backToMainMenuButton.UseVisualStyleBackColor = true;
+            this.backToMainMenuButton.Click += new System.EventHandler(this.backToMainMenuButton_Click);
             // 
-            // chart1
+            // progressChart
             // 
             chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
+            this.progressChart.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
-            this.chart1.Location = new System.Drawing.Point(37, 77);
-            this.chart1.Name = "chart1";
+            this.progressChart.Legends.Add(legend1);
+            this.progressChart.Location = new System.Drawing.Point(37, 77);
+            this.progressChart.Name = "progressChart";
             series1.ChartArea = "ChartArea1";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
-            this.chart1.Size = new System.Drawing.Size(719, 300);
-            this.chart1.TabIndex = 3;
-            this.chart1.Text = "chart1";
+            this.progressChart.Series.Add(series1);
+            this.progressChart.Size = new System.Drawing.Size(719, 300);
+            this.progressChart.TabIndex = 3;
+            this.progressChart.Text = "chart1";
             // 
             // progMenu
             // 
@@ -146,13 +149,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.progMenu);
-            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.progressChart);
             this.Controls.Add(this.backToMainMenuButton);
             this.Controls.Add(this.weightHistoryButton);
             this.Controls.Add(this.calorieHistoryButton);
             this.Name = "ViewHistoryForm";
             this.Text = "Calorie calculator";
-            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.progressChart)).EndInit();
             this.progMenu.ResumeLayout(false);
             this.progMenu.PerformLayout();
             this.ResumeLayout(false);
@@ -165,7 +168,7 @@
         private System.Windows.Forms.Button calorieHistoryButton;
         private System.Windows.Forms.Button weightHistoryButton;
         private System.Windows.Forms.Button backToMainMenuButton;
-        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.DataVisualization.Charting.Chart progressChart;
         private System.Windows.Forms.MenuStrip progMenu;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;

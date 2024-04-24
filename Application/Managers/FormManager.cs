@@ -87,6 +87,7 @@ namespace IP_PROJECT
 
         public void ShowViewHistoryForm()
         {
+            _viewHistoryForm.ResetForm();
             _viewHistoryForm.Show();
         }
         public void HideViewHistoryForm()
