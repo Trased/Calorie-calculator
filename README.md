@@ -24,7 +24,7 @@ To run the Calorie Calculator Application, ensure that your system meets the fol
 
 2. Open the solution file (`CalorieCalculator.sln`) in Visual Studio.
 
-3. Register at [Api-ninjas](https://api-ninjas.com/) and insert your API key in the ParserManager.cs file
+3. Register at [Api-ninjas](https://api-ninjas.com/) and insert your API key in the [ParserManager.cs](https://github.com/Trased/Calorie-calculator/blob/95dff08902b43309178fd5a157483bb59cf15a72/Application/Managers/ParserManager.cs#L39) file
 
 3. Build the solution to restore packages and compile the application.
 
