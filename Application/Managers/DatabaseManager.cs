@@ -1,4 +1,22 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        DatabaseManager.cs                                       *
+ *  Copyright:   (c) 2024, Gisca Valentin                                 *
+ *  E-mail:      v.gisca2710@gmail.com                                    *
+ *  Website:     https://github.com/Trased/Calorie-calculator             *
+ *  Description: Implement database operations for user                   *
+ *               authentication and data management.                      *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.Data.SQLite;
 using System.Linq;
@@ -10,12 +28,17 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace IP_PROJECT
 {
+    /// <summary>
+    /// Singleton class for database operations
+    /// </summary>
     public class DatabaseManager
     {
-        private static DatabaseManager _instance;
-        
-        private string _connectionString = "Data Source=calorie_calculator.db;Version=3;";
+        private static DatabaseManager _instance;  
+        private const string  _connectionString = "Data Source=calorie_calculator.db;Version=3;";
 
+        /// <summary>
+        /// Singleton instance accessor.
+        /// </summary>
         public static DatabaseManager Instance
         {
             get
@@ -27,7 +50,10 @@ namespace IP_PROJECT
                 return _instance;
             }
         }
-
+        
+        /// <summary>
+        /// Sets user credentials from the database upon login.
+        /// </summary>
         public void SetCredentials()
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -56,7 +82,12 @@ namespace IP_PROJECT
                 }
             }
         }
-       
+        
+        /// <summary>
+        /// Authenticates user login credentials against the database.
+        /// </summary>
+        /// <param name="username">Username input.</param>
+        /// <param name="password">Password input.</param>
         public void LogIn(string username, string password)
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -88,7 +119,18 @@ namespace IP_PROJECT
                 }
             }
         }
-
+        
+        /// <summary>
+        /// Registers a new user and stores their information in the database.
+        /// </summary>
+        /// <param name="firstName">First name of the user.</param>
+        /// <param name="lastName">Last name of the user.</param>
+        /// <param name="age">Age of the user.</param>
+        /// <param name="gender">Gender of the user.</param>
+        /// <param name="height">Height of the user.</param>
+        /// <param name="weight">Weight of the user.</param>
+        /// <param name="username">Username chosen by the user.</param>
+        /// <param name="password">Password chosen by the user.</param>
         public void Register(string firstName, string lastName, int age, string gender, int height, double weight, string username, string password)
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -142,6 +184,11 @@ namespace IP_PROJECT
             }
         }
 
+        /// <summary>
+        /// Checks if a username is already taken in the database.
+        /// </summary>
+        /// <param name="username">Username to check.</param>
+        /// <returns>True if the username is already taken, false otherwise.</returns>
         public bool IsUsernameTaken(string username)
         {
             bool isTaken = false;
@@ -163,6 +210,11 @@ namespace IP_PROJECT
             return isTaken;
         }
 
+        /// <summary>
+        /// Updates a specific field in the user's profile.
+        /// </summary>
+        /// <param name="field">Field to update.</param>
+        /// <param name="value">New value for the field.</param>
         public void UpdateProfileField(string field, object value)
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -205,7 +257,12 @@ namespace IP_PROJECT
                 FormManager.Instance.ShowMainForm();
             }
         }
-        
+
+        /// <summary>
+        /// Updates the user's password in the database.
+        /// </summary>
+        /// <param name="connection">SQLiteConnection object.</param>
+        /// <param name="password">New password.</param>
         public void UpdatePassowrd(SQLiteConnection connection, string password)
         {
             string query = "UPDATE Person SET password = @newPassword WHERE id = @id";
@@ -229,7 +286,12 @@ namespace IP_PROJECT
                 }
             }
         }
-        
+
+        /// <summary>
+        /// Checks if the current password matches the one stored in the database.
+        /// </summary>
+        /// <param name="insertedCurrentPassword">Current password input.</param>
+        /// <param name="insertedNewPassword">New password input.</param>
         public void CheckPassword(string insertedCurrentPassword, string insertedNewPassword)
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -266,6 +328,17 @@ namespace IP_PROJECT
             }
         }
 
+        /// <summary>
+        /// Saves food intake data to the database.
+        /// </summary>
+        /// <param name="date">Date of food intake.</param>
+        /// <param name="name">Name of the food.</param>
+        /// <param name="calories">Calories consumed.</param>
+        /// <param name="servingSize">Serving size of the food.</param>
+        /// <param name="fat">Fat content of the food.</param>
+        /// <param name="protein">Protein content of the food.</param>
+        /// <param name="carbo">Carbohydrate content of the food.</param>
+        /// <returns>True if saving successful, false otherwise.</returns>
         public bool SaveFoodToDatabase(DateTime date,string name, double calories, double servingSize, double fat, double protein, double carbo)
         {
             using (SQLiteConnection connection = new SQLiteConnection(_connectionString))
@@ -291,7 +364,11 @@ namespace IP_PROJECT
             }
 
         }
-    
+
+        /// <summary>
+        /// Retrieves weight history data from the database.
+        /// </summary>
+        /// <returns>List of tuples containing date and weight.</returns>
         public List<(DateTime, double)> GetWeightHistory()
         {
             List<(DateTime, double)> weightHistory = new List<(DateTime, double)>();
@@ -318,6 +395,10 @@ namespace IP_PROJECT
             return weightHistory;
         }
 
+        /// <summary>
+        /// Retrieves daily calorie consumption data from the database.
+        /// </summary>
+        /// <returns>Dictionary with date as key and total calories consumed as value.</returns>
         public Dictionary<DateTime, double> GetCaloriesConsumedPerDay()
         {
             Dictionary<DateTime, double> caloriesPerDay = new Dictionary<DateTime, double>();

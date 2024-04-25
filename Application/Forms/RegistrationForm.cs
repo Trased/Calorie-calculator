@@ -1,4 +1,21 @@
-﻿using System;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        RegistrationForm.cs                                      *
+ *  Copyright:   (c) 2024, Gisca Valentin                                 *
+ *  E-mail:      v.gisca2710@gmail.com                                    *
+ *  Website:     https://github.com/Trased/Calorie-calculator             *
+ *  Description: Defines a form for user registration.                    *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,17 +31,29 @@ namespace IP_PROJECT
 {
     public partial class RegistrationForm : Form
     {
+        /// <summary>
+        /// Initializes the RegistrationForm and attaches a FormClosing event handler to close the application.
+        /// </summary>
         public RegistrationForm()
         {
             InitializeComponent();
             this.FormClosing += CloseApp;
+            this.KeyDown += RegistrationForm_KeyDown;
         }
 
+        /// <summary>
+        /// Closes the application when the form is closing.
+        /// </summary>
+        /// <param name="sender">Event sender.</param>
+        /// <param name="e">FormClosing event arguments.</param>
         private void CloseApp(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Resets the form by clearing input fields.
+        /// </summary>
         public void ResetForm()
         {
             this.genderBox.Text = string.Empty;
@@ -37,12 +66,22 @@ namespace IP_PROJECT
             this.passwordBox.Text = string.Empty;
         }
 
+        /// <summary>
+        /// Handles the click event of the logInButtton to hide the RegistrationForm and show the LogInForm.
+        /// </summary>
+        /// <param name="sender">Event sender.</param>
+        /// <param name="e">Event arguments.</param>
         private void logInButtton_Click(object sender, EventArgs e)
         {
             FormManager.Instance.HideRegistrationForm();
             FormManager.Instance.ShowLogInForm();
         }
 
+        /// <summary>
+        /// Handles the click event of the registerButton to register a new user.
+        /// </summary>
+        /// <param name="sender">Event sender.</param>
+        /// <param name="e">Event arguments.</param>
         private void registerButton_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(firstNameBox.Text) || !IsOnlyLetters(firstNameBox.Text))
@@ -110,9 +149,52 @@ namespace IP_PROJECT
             FormManager.Instance.ShowLogInForm();
         }
 
+        /// <summary>
+        /// Validates whether a string contains only letters.
+        /// </summary>
+        /// <param name="str">String to validate.</param>
+        /// <returns>True if the string contains only letters; otherwise, false.</returns>
         private bool IsOnlyLetters(string str)
         {
             return str.All(char.IsLetter);
+        }
+
+        /// <summary>
+        /// Event handler for the Click event of the exitToolStripMenuItem.
+        /// Terminates the application when the exitToolStripMenuItem is clicked.
+        /// </summary>
+        /// <param name="sender">The object that raised the event.</param>
+        /// <param name="e">An instance of the EventArgs class that contains event data.</param>
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// Event handler for the KeyDown event of the RegistrationForm.
+        /// Detects keyboard input and checks if the CTRL+X combination is pressed.
+        /// Terminates the application if CTRL+X is pressed.
+        /// </summary>
+        /// <param name="sender">The object that raised the event.</param>
+        /// <param name="e">An instance of the KeyEventArgs class that contains event data, including the keys that were pressed.</param>
+        private void RegistrationForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if CTRL+X combination is pressed
+            if (e.Control && e.KeyCode == Keys.X)
+            {
+                Application.Exit();
+            }
+        }
+
+        /// <summary>
+        /// Event handler for the Click event of the documentationToolStripMenuItem.
+        /// Displays the documentation for the calorie calculator application.
+        /// </summary>
+        /// <param name="sender">The object that raised the event.</param>
+        /// <param name="e">An instance of the EventArgs class that contains event data.</param>
+        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }
     }
 }

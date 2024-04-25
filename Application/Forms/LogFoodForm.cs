@@ -1,4 +1,22 @@
-﻿using IP_PROJECT.Strategy;
+﻿/**************************************************************************
+ *                                                                        *
+ *  File:        LogFoodForm.cs                                           *
+ *  Copyright:   (c) 2024, Gisca Valentin                                 *
+ *  E-mail:      v.gisca2710@gmail.com                                    *
+ *  Website:     https://github.com/Trased/Calorie-calculator             *
+ *  Description: Defines the form for logging food intake in the          *
+ *               application.                                             *
+ *                                                                        *
+ *  This program is free software; you can redistribute it and/or modify  *
+ *  it under the terms of the GNU General Public License as published by  *
+ *  the Free Software Foundation. This program is distributed in the      *
+ *  hope that it will be useful, but WITHOUT ANY WARRANTY; without even   *
+ *  the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR   *
+ *  PURPOSE. See the GNU General Public License for more details.         *
+ *                                                                        *
+ **************************************************************************/
+
+using IP_PROJECT.Strategy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,12 +34,20 @@ namespace IP_PROJECT
 {
     public partial class LogFoodForm : Form
     {
+        /// <summary>
+        /// Initializes the LogFoodForm and attaches a FormClosing event handler to close the application.
+        /// </summary>
         public LogFoodForm()
         {
             InitializeComponent();
             this.FormClosing += CloseApp;
+
+            this.KeyDown += LogFoodForm_KeyDown;
         }
 
+        /// <summary>
+        /// Displays the current date and calculates and displays the recommended calorie intake based on user data.
+        /// </summary>
         public void ShowInitialData()
         {
             currentDateDisplayLabel.Text = DateTime.Now.Date.ToShortDateString();
@@ -44,17 +70,32 @@ namespace IP_PROJECT
             calorieIntakeDisplayLabel.Refresh();
         }
 
+        /// <summary>
+        /// Closes the application when the form is closing.
+        /// </summary>
+        /// <param name="sender">Event sender.</param>
+        /// <param name="e">FormClosing event arguments.</param>
         private void CloseApp(object sender, FormClosingEventArgs e)
         {
             Application.Exit();
         }
 
+        /// <summary>
+        /// Handles the click event of the backToMainMenuButton to hide the LogFoodForm and show the MainForm.
+        /// </summary>
+        /// <param name="sender">Event sender.</param>
+        /// <param name="e">Event arguments.</param>
         private void backToMainMenuButton_Click(object sender, EventArgs e)
         {
             FormManager.Instance.HideLogFoodForm();
             FormManager.Instance.ShowMainForm();
         }
 
+        /// <summary>
+        /// Handles the click event of the searchButton to initiate a food search using the entered query.
+        /// </summary>
+        /// <param name="sender">Event sender.</param>
+        /// <param name="e">Event arguments.</param>
         private async void searchButton_Click(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(foodSearchBox.Text))
@@ -72,6 +113,11 @@ namespace IP_PROJECT
             }
         }
 
+        /// <summary>
+        /// Handles the click event of the proceedButton to save the selected food item to the database.
+        /// </summary>
+        /// <param name="sender">Event sender.</param>
+        /// <param name="e">Event arguments.</param>
         private void proceedButton_Click(object sender, EventArgs e)
         {
             if(searchOutputBox.SelectedIndex != -1)
@@ -97,6 +143,44 @@ namespace IP_PROJECT
                     }
                 }
             }
+        }
+
+        /// <summary>
+        /// Event handler for the Click event of the exitToolStripMenuItem.
+        /// Terminates the application when the exitToolStripMenuItem is clicked.
+        /// </summary>
+        /// <param name="sender">The object that raised the event.</param>
+        /// <param name="e">An instance of the EventArgs class that contains event data.</param>
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /// <summary>
+        /// Event handler for the KeyDown event of the LogFoodForm.
+        /// Detects keyboard input and checks if the CTRL+X combination is pressed.
+        /// Terminates the application if CTRL+X is pressed.
+        /// </summary>
+        /// <param name="sender">The object that raised the event.</param>
+        /// <param name="e">An instance of the KeyEventArgs class that contains event data, including the keys that were pressed.</param>
+        private void LogFoodForm_KeyDown(object sender, KeyEventArgs e)
+        {
+            // Check if CTRL+X combination is pressed
+            if (e.Control && e.KeyCode == Keys.X)
+            {
+                Application.Exit();
+            }
+        }
+
+        /// <summary>
+        /// Event handler for the Click event of the documentationToolStripMenuItem.
+        /// Displays the documentation for the calorie calculator application.
+        /// </summary>
+        /// <param name="sender">The object that raised the event.</param>
+        /// <param name="e">An instance of the EventArgs class that contains event data.</param>
+        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }
     }
 }
