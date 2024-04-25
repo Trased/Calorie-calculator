@@ -27,7 +27,7 @@ namespace IP_PROJECT.Strategy
     class MaleCalorieIntake : ICalorieIntake
     {
         /// <summary>
-        /// Calculate recommended calorie intake for men
+        /// Calculate recommended calorie intake for men using Revised Harris-Benedict Equation
         /// </summary>
         /// <param name="age">Age of the individual.</param>
         /// <param name="height">Height of the individual.</param>
@@ -42,7 +42,7 @@ namespace IP_PROJECT.Strategy
     class FemaleCalorieIntake : ICalorieIntake
     {
         /// <summary>
-        /// Calculate recommended calorie intake for women
+        /// Calculate recommended calorie intake for women using Revised Harris-Benedict Equation
         /// </summary>
         /// <param name="age">Age of the individual.</param>
         /// <param name="height">Height of the individual.</param>
