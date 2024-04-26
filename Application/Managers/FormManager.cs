@@ -39,7 +39,7 @@ namespace IP_PROJECT
         private LogFoodForm _logFoodForm;
 
         /// <summary>
-        /// Initializes forms and shows the login form.
+        /// Class constructor that initializes forms and shows the login form.
         /// </summary>
         private FormManager()
         {
