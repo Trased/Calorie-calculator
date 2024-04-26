@@ -32,13 +32,26 @@ namespace IP_PROJECT
     {
         private static UserData _instance;
 
-        private int _age = 0;
-        private int _height = 0;
-        private double _weight = 0;
-        private string _name = "";
-        private int _id = 0;
-        private string _gender = "";
+        private int _age;
+        private int _height;
+        private double _weight;
+        private string _name;
+        private int _id;
+        private string _gender;
 
+        /// <summary>
+        /// Private default class constructor required for Singleton
+        /// </summary>
+        private UserData() 
+        {
+            this._age = 0;
+            this._height = 0;
+            this._weight = 0;
+            this._name = "";
+            this._id = 0;
+            this._gender = "";
+    }
+        
         /// <summary>
         /// Singleton instance accessor.
         /// </summary>

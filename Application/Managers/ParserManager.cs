@@ -40,6 +40,10 @@ namespace IP_PROJECT
         private const string _apiUrl = "https://api.api-ninjas.com/v1/nutrition";
 
         /// <summary>
+        /// Private default class constructor required for Singleton
+        /// </summary>
+        private ParserManager() { }
+        /// <summary>
         /// Singleton instance accessor.
         /// </summary>
         public static ParserManager Instance

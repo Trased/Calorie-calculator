@@ -37,6 +37,10 @@ namespace IP_PROJECT
         private const string  _connectionString = "Data Source=calorie_calculator.db;Version=3;";
 
         /// <summary>
+        /// Private default class constructor required for Singleton
+        /// </summary>
+        private DatabaseManager() { }
+        /// <summary>
         /// Singleton instance accessor.
         /// </summary>
         public static DatabaseManager Instance
