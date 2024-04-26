@@ -16,6 +16,7 @@
  *                                                                        *
  **************************************************************************/
 
+using IP_PROJECT.Strategy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,8 +29,7 @@ using System.Windows.Forms;
 using System.Net.Http;
 using static System.Net.WebRequestMethods;
 using Newtonsoft.Json;
-using Strategy;
-using ParserMgr;
+
 namespace IP_PROJECT
 {
     public partial class LogFoodForm : Form
