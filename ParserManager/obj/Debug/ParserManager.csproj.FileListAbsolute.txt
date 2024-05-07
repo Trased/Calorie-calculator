@@ -1,0 +1,9 @@
+C:\Users\trase\Desktop\IP\Proj\ParserManager\bin\Debug\ParserManager.dll
+C:\Users\trase\Desktop\IP\Proj\ParserManager\bin\Debug\ParserManager.pdb
+C:\Users\trase\Desktop\IP\Proj\ParserManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\trase\Desktop\IP\Proj\ParserManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\trase\Desktop\IP\Proj\ParserManager\obj\Debug\ParserManager.csproj.AssemblyReference.cache
+C:\Users\trase\Desktop\IP\Proj\ParserManager\obj\Debug\ParserManager.csproj.CoreCompileInputs.cache
+C:\Users\trase\Desktop\IP\Proj\ParserManager\obj\Debug\ParserMa.F636EB24.Up2Date
+C:\Users\trase\Desktop\IP\Proj\ParserManager\obj\Debug\ParserManager.dll
+C:\Users\trase\Desktop\IP\Proj\ParserManager\obj\Debug\ParserManager.pdb

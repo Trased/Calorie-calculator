@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DBMgr;
 namespace IP_PROJECT
 {
     public partial class UpdateProfileForm : Form
@@ -38,6 +38,7 @@ namespace IP_PROJECT
             InitializeComponent();
             this.FormClosing += CloseApp;
             this.KeyDown += UpdateProfileForm_KeyDown;
+            DatabaseManager.Instance.OnUpdateProfileSuccess += HandleUpdateProfileSuccess;
         }
 
         /// <summary>
@@ -159,6 +160,11 @@ namespace IP_PROJECT
         private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
+        }
+        private void HandleUpdateProfileSuccess(object sender, EventArgs e)
+        {
+            FormManager.Instance.HideUpdateProfileForm();
+            FormManager.Instance.ShowMainForm();
         }
     }
 }

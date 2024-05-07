@@ -1,0 +1,16 @@
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\DatabaseManager.dll.config
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\DatabaseManager.dll
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\DatabaseManager.pdb
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\EntityFramework.dll
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\System.Data.SQLite.dll
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\System.Data.SQLite.EF6.dll
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\EntityFramework.xml
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\bin\Debug\System.Data.SQLite.xml
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\obj\Debug\DatabaseManager.csproj.AssemblyReference.cache
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\obj\Debug\DatabaseManager.csproj.CoreCompileInputs.cache
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\obj\Debug\Database.A8297DAC.Up2Date
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\obj\Debug\DatabaseManager.dll
+C:\Users\trase\Desktop\IP\Proj\DatabaseManager\obj\Debug\DatabaseManager.pdb

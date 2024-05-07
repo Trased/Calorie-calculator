@@ -16,7 +16,6 @@
  *                                                                        *
  **************************************************************************/
 
-using IP_PROJECT.Strategy;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -29,7 +28,9 @@ using System.Windows.Forms;
 using System.Net.Http;
 using static System.Net.WebRequestMethods;
 using Newtonsoft.Json;
-
+using Strategy;
+using ParserMgr;
+using DBMgr;
 namespace IP_PROJECT
 {
     public partial class LogFoodForm : Form
@@ -43,6 +44,9 @@ namespace IP_PROJECT
             this.FormClosing += CloseApp;
 
             this.KeyDown += LogFoodForm_KeyDown;
+            DatabaseManager.Instance.OnLoginSuccess += HandleLoginSuccess;
+            DatabaseManager.Instance.OnMessageBox += HandleMessageBox;
+            ParserManager.Instance.OnMessageBox += HandleMessageBox;
         }
 
         /// <summary>
@@ -181,6 +185,16 @@ namespace IP_PROJECT
         private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
+        }
+
+        private void HandleLoginSuccess(object sender, EventArgs e)
+        {
+            FormManager.Instance.HideLogInForm();
+            FormManager.Instance.ShowMainForm();
+        }
+        private void HandleMessageBox(object sender, string message)
+        {
+            MessageBox.Show(message);
         }
     }
 }

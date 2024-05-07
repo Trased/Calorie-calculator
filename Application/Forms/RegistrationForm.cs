@@ -26,7 +26,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
-
+using DBMgr;
 namespace IP_PROJECT
 {
     public partial class RegistrationForm : Form
