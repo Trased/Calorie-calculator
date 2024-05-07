@@ -20,7 +20,7 @@ using System.Data.SQLite;
 using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
-
+using DBMgr;
 namespace IP_PROJECT
 {
     public partial class LogInForm : Form

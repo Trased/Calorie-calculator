@@ -1,0 +1,12 @@
+C:\Users\trase\Desktop\IP\Proj\Strategy\obj\Debug\Strategy.csproj.AssemblyReference.cache
+C:\Users\trase\Desktop\IP\Proj\Strategy\obj\Debug\Strategy.csproj.CoreCompileInputs.cache
+C:\Users\trase\Desktop\IP\Proj\Strategy\bin\Debug\Strategy.dll
+C:\Users\trase\Desktop\IP\Proj\Strategy\bin\Debug\Strategy.pdb
+C:\Users\trase\Desktop\IP\Proj\Strategy\obj\Debug\Strategy.dll
+C:\Users\trase\Desktop\IP\Proj\Strategy\obj\Debug\Strategy.pdb
+C:\Users\trase\Desktop\IP\Proj)\Strategy\bin\Debug\Strategy.dll
+C:\Users\trase\Desktop\IP\Proj)\Strategy\bin\Debug\Strategy.pdb
+C:\Users\trase\Desktop\IP\Proj)\Strategy\obj\Debug\Strategy.csproj.AssemblyReference.cache
+C:\Users\trase\Desktop\IP\Proj)\Strategy\obj\Debug\Strategy.csproj.CoreCompileInputs.cache
+C:\Users\trase\Desktop\IP\Proj)\Strategy\obj\Debug\Strategy.dll
+C:\Users\trase\Desktop\IP\Proj)\Strategy\obj\Debug\Strategy.pdb

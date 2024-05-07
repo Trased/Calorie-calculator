@@ -25,7 +25,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using DBMgr;
 namespace IP_PROJECT
 {
     public partial class ViewHistoryForm : Form
