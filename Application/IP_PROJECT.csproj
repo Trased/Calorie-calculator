@@ -81,7 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Managers\FormManager.cs" />
+    <Compile Include="FormManager.cs" />
     <Compile Include="Forms\LogFoodForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +160,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Managers\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
