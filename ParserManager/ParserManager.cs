@@ -85,29 +85,36 @@ namespace ParserMgr
         {
             string fullUrl = $"{_apiUrl}?query={query}";
             List<string> formattedResults = new List<string>();
-
-            using (HttpClient client = new HttpClient())
+            try
             {
-                client.DefaultRequestHeaders.Add("X-Api-Key", _apiKey);
-
-                HttpResponseMessage response = await client.GetAsync(fullUrl);
-
-                if (response.IsSuccessStatusCode)
+                using (HttpClient client = new HttpClient())
                 {
-                    string responseBody = await response.Content.ReadAsStringAsync();
-                    List<Nutrition> nutritionList = JsonConvert.DeserializeObject<List<Nutrition>>(responseBody);
-                    foreach (Nutrition nutrition in nutritionList)
+                    client.DefaultRequestHeaders.Add("X-Api-Key", _apiKey);
+
+                    HttpResponseMessage response = await client.GetAsync(fullUrl);
+
+                    if (response.IsSuccessStatusCode)
                     {
-                        string formattedResult = $"{nutrition.Name}: {nutrition.Calories} calories, {nutrition.Serving_size_g} g serving size, {nutrition.Fat_total_g} g fat, {nutrition.Protein_g} g protein, {nutrition.Carbohydrates_total_g} g carbohydrates";
-                        formattedResults.Add(formattedResult);
+                        string responseBody = await response.Content.ReadAsStringAsync();
+                        List<Nutrition> nutritionList = JsonConvert.DeserializeObject<List<Nutrition>>(responseBody);
+                        foreach (Nutrition nutrition in nutritionList)
+                        {
+                            string formattedResult = $"{nutrition.Name}: {nutrition.Calories} calories, {nutrition.Serving_size_g} g serving size, {nutrition.Fat_total_g} g fat, {nutrition.Protein_g} g protein, {nutrition.Carbohydrates_total_g} g carbohydrates";
+                            formattedResults.Add(formattedResult);
+                        }
                     }
+                    else
+                    {
+                        OnMessageBox?.Invoke(this, $"Error: {response.StatusCode} - {response.ReasonPhrase}");
+                    }
+                   
                 }
-                else
-                {
-                    OnMessageBox?.Invoke(this, $"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                }
-                return formattedResults;
             }
+            catch(HttpRequestException ex)
+            {
+                OnMessageBox?.Invoke(this, ex.Message);
+            }
+            return formattedResults;
         }
     }
 }

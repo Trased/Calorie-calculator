@@ -17,3 +17,22 @@ C:\Users\trase\Desktop\IP\Proj\ParserManager_UT\UnitTestProjectParserManager\obj
 C:\Users\trase\Desktop\IP\Proj\ParserManager_UT\UnitTestProjectParserManager\obj\Debug\UnitTest.1664F957.Up2Date
 C:\Users\trase\Desktop\IP\Proj\ParserManager_UT\UnitTestProjectParserManager\obj\Debug\UnitTestProjectParserManager.dll
 C:\Users\trase\Desktop\IP\Proj\ParserManager_UT\UnitTestProjectParserManager\obj\Debug\UnitTestProjectParserManager.pdb
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.TestPlatform.AdapterUtilities.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\UnitTestProjectParserManager.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\UnitTestProjectParserManager.pdb
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\ParserManager.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Newtonsoft.Json.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\ParserManager.pdb
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\bin\Debug\Newtonsoft.Json.xml
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\obj\Debug\UnitTestProjectParserManager.csproj.AssemblyReference.cache
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\obj\Debug\UnitTestProjectParserManager.csproj.CoreCompileInputs.cache
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\obj\Debug\UnitTest.1664F957.Up2Date
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\obj\Debug\UnitTestProjectParserManager.dll
+C:\Users\trase\Desktop\IP\Proj\Calorie calculator\UnitTestProjectParserManager\UnitTestProjectParserManager\obj\Debug\UnitTestProjectParserManager.pdb

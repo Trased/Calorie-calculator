@@ -7,6 +7,12 @@
       "RelativeMoniker": "D:0:0:{475D1A33-5516-4579-8D1D-03C868DFE806}|ParserManager.csproj|solutionrelative:parsermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{C829526F-B89F-429C-96A3-108B4E5A7568}|..\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestProjectParserManager.csproj|c:\\users\\trase\\desktop\\ip\\proj\\calorie calculator\\unittestprojectparsermanager\\unittestprojectparsermanager\\unittestparsermanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C829526F-B89F-429C-96A3-108B4E5A7568}|..\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestProjectParserManager.csproj|c:\\users\\trase\\desktop\\ip\\proj\\calorie calculator\\unittestprojectparsermanager\\unittestprojectparsermanager\\unittestnutrition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{475D1A33-5516-4579-8D1D-03C868DFE806}|ParserManager.csproj|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\ParserManager\\nutrition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{475D1A33-5516-4579-8D1D-03C868DFE806}|ParserManager.csproj|solutionrelative:nutrition.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -24,7 +30,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -36,7 +42,31 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTestParserManager.cs",
+              "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestParserManager.cs",
+              "RelativeDocumentMoniker": "..\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestParserManager.cs",
+              "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestParserManager.cs",
+              "RelativeToolTip": "..\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestParserManager.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T13:15:24.41Z"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "UnitTestNutrition.cs",
+              "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestNutrition.cs",
+              "RelativeDocumentMoniker": "..\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestNutrition.cs",
+              "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestNutrition.cs",
+              "RelativeToolTip": "..\\UnitTestProjectParserManager\\UnitTestProjectParserManager\\UnitTestNutrition.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACUAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T13:15:13.936Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "UnitTestParserManager.cs",
               "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\ParserManager_UT\\UnitTestProjectParserManager\\UnitTestParserManager.cs",
               "RelativeDocumentMoniker": "..\\..\\ParserManager_UT\\UnitTestProjectParserManager\\UnitTestParserManager.cs",
@@ -48,7 +78,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "UnitTestNutrition.cs",
               "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\ParserManager_UT\\UnitTestProjectParserManager\\UnitTestNutrition.cs",
               "RelativeDocumentMoniker": "..\\..\\ParserManager_UT\\UnitTestProjectParserManager\\UnitTestNutrition.cs",
@@ -66,14 +96,14 @@
               "RelativeDocumentMoniker": "ParserManager.cs",
               "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\ParserManager\\ParserManager.cs",
               "RelativeToolTip": "ParserManager.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAswEoAAAANAAAA",
+              "ViewState": "AQIAAFwAAAAAAAAAAAAUwFYAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-07T15:06:24.549Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Nutrition.cs",
               "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\ParserManager\\Nutrition.cs",
               "RelativeDocumentMoniker": "Nutrition.cs",

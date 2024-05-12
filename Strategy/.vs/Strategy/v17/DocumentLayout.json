@@ -3,11 +3,7 @@
   "WorkspaceRootPath": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestStrategy\\UnitTestStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{FDA74F2A-D688-44B9-8A9B-A2A70C4A7B5D}|Strategy.csproj|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\calorieintakecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{FDA74F2A-D688-44B9-8A9B-A2A70C4A7B5D}|Strategy.csproj|solutionrelative:calorieintakecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{267757E7-68B2-4332-9806-8F717961607D}|..\\UnitTestProjectStrategy\\UnitTestProjectStrategy.csproj|c:\\users\\trase\\desktop\\ip\\proj\\calorie calculator\\unittestprojectstrategy\\unitteststrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{FDA74F2A-D688-44B9-8A9B-A2A70C4A7B5D}|Strategy.csproj|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\icalorieintake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -16,6 +12,13 @@
     {
       "AbsoluteMoniker": "D:0:0:{FDA74F2A-D688-44B9-8A9B-A2A70C4A7B5D}|Strategy.csproj|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\calorieintakemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{FDA74F2A-D688-44B9-8A9B-A2A70C4A7B5D}|Strategy.csproj|solutionrelative:calorieintakemanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{FDA74F2A-D688-44B9-8A9B-A2A70C4A7B5D}|Strategy.csproj|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\calorieintakecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{FDA74F2A-D688-44B9-8A9B-A2A70C4A7B5D}|Strategy.csproj|solutionrelative:calorieintakecalculator.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestStrategy\\UnitTestStrategy.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,6 +42,19 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "UnitTestStrategy.cs",
+              "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestProjectStrategy\\UnitTestStrategy.cs",
+              "RelativeDocumentMoniker": "..\\UnitTestProjectStrategy\\UnitTestStrategy.cs",
+              "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestProjectStrategy\\UnitTestStrategy.cs",
+              "RelativeToolTip": "..\\UnitTestProjectStrategy\\UnitTestStrategy.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAYAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-11T13:14:45.804Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UnitTestStrategy.cs",
               "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestStrategy\\UnitTestStrategy.cs",
               "RelativeDocumentMoniker": "..\\UnitTestStrategy\\UnitTestStrategy.cs",
               "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\UnitTestStrategy\\UnitTestStrategy.cs",
@@ -48,7 +64,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "ICalorieIntake.cs",
               "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\ICalorieIntake.cs",
               "RelativeDocumentMoniker": "ICalorieIntake.cs",
@@ -56,11 +72,12 @@
               "RelativeToolTip": "ICalorieIntake.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T18:02:42.902Z"
+              "WhenOpened": "2024-04-26T18:02:42.902Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "CalorieIntakeManager.cs",
               "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\CalorieIntakeManager.cs",
               "RelativeDocumentMoniker": "CalorieIntakeManager.cs",
@@ -68,19 +85,21 @@
               "RelativeToolTip": "CalorieIntakeManager.cs",
               "ViewState": "AQIAAAsAAAAAAAAAAAAYwDIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T18:02:04.602Z"
+              "WhenOpened": "2024-04-26T18:02:04.602Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "CalorieIntakeCalculator.cs",
               "DocumentMoniker": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\CalorieIntakeCalculator.cs",
               "RelativeDocumentMoniker": "CalorieIntakeCalculator.cs",
               "ToolTip": "C:\\Users\\trase\\Desktop\\IP\\Proj\\Calorie calculator\\Strategy\\CalorieIntakeCalculator.cs",
               "RelativeToolTip": "CalorieIntakeCalculator.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAWAAAA",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACcAAABRAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-26T18:01:17.935Z"
+              "WhenOpened": "2024-04-26T18:01:17.935Z",
+              "EditorCaption": ""
             }
           ]
         }

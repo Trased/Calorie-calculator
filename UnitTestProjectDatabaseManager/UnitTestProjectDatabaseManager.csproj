@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.props" Condition="Exists('..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.props')" />
+  <Import Project="..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\DatabaseManager\packages\NUnit.4.1.0\build\NUnit.props" Condition="Exists('..\DatabaseManager\packages\NUnit.4.1.0\build\NUnit.props')" />
   <Import Project="..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props" Condition="Exists('..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -39,14 +42,62 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Castle.Core, Version=5.0.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\Castle.Core.5.1.1\lib\net462\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\DatabaseManager\packages\MSTest.TestFramework.2.2.10\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions, Version=14.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\DatabaseManager\packages\MSTest.TestFramework.2.2.10\lib\net45\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll</HintPath>
     </Reference>
+    <Reference Include="Moq, Version=4.20.70.0, Culture=neutral, PublicKeyToken=69f491c39445e920, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\Moq.4.20.70\lib\net462\Moq.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=4.0.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\NUnit.4.1.0\lib\net462\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework.legacy, Version=4.0.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\NUnit.4.1.0\lib\net462\nunit.framework.legacy.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SQLite, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\System.Data.SQLite.EF6.1.0.118.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.118.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\System.Data.SQLite.Linq.1.0.118.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\xunit.abstractions.2.0.3\lib\net35\xunit.abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.assert, Version=2.8.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\xunit.assert.2.8.0\lib\netstandard1.1\xunit.assert.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.core, Version=2.8.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\xunit.extensibility.core.2.8.0\lib\net452\xunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="xunit.execution.desktop, Version=2.8.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
+      <HintPath>..\DatabaseManager\packages\xunit.extensibility.execution.2.8.0\lib\net452\xunit.execution.desktop.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="UnitTestDatabaseManager.cs" />
@@ -54,6 +105,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -70,6 +122,15 @@
     </PropertyGroup>
     <Error Condition="!Exists('..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.props'))" />
     <Error Condition="!Exists('..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets'))" />
+    <Error Condition="!Exists('..\DatabaseManager\packages\NUnit.4.1.0\build\NUnit.props')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\NUnit.4.1.0\build\NUnit.props'))" />
+    <Error Condition="!Exists('..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+    <Error Condition="!Exists('..\DatabaseManager\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets'))" />
+    <Error Condition="!Exists('..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.props')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.props'))" />
+    <Error Condition="!Exists('..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.targets'))" />
   </Target>
   <Import Project="..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets" Condition="Exists('..\DatabaseManager\packages\MSTest.TestAdapter.2.2.10\build\net46\MSTest.TestAdapter.targets')" />
+  <Import Project="..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\DatabaseManager\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <Import Project="..\DatabaseManager\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets" Condition="Exists('..\DatabaseManager\packages\Stub.System.Data.SQLite.Core.NetFramework.1.0.118.0\build\net46\Stub.System.Data.SQLite.Core.NetFramework.targets')" />
+  <Import Project="..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.targets" Condition="Exists('..\DatabaseManager\packages\xunit.core.2.8.0\build\xunit.core.targets')" />
 </Project>
