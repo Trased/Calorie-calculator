@@ -52,7 +52,7 @@ namespace IP_PROJECT
         /// <param name="e">Event arguments.</param>
         private void logInButton_Click(object sender, EventArgs e)
         {
-            DatabaseManager.Instance.LogIn(usernameBox.Text, passwordBox.Text);
+            FormManager.Instance.GetDbManager.LogIn(usernameBox.Text, passwordBox.Text);
         }
 
         /// <summary>

@@ -136,13 +136,13 @@ namespace IP_PROJECT
                 return;
             }
 
-            if (DatabaseManager.Instance.IsUsernameTaken(usernameBox.Text))
+            if (FormManager.Instance.GetDbManager.IsUsernameTaken(usernameBox.Text))
             {
                 MessageBox.Show("Username is already taken.");
                 return;
             }
 
-            DatabaseManager.Instance.Register(firstNameBox.Text, lastNameBox.Text, age, gender, height, weight, usernameBox.Text, passwordBox.Text);
+            FormManager.Instance.GetDbManager.Register(firstNameBox.Text, lastNameBox.Text, age, gender, height, weight, usernameBox.Text, passwordBox.Text);
 
             MessageBox.Show("Registration successful!");
             FormManager.Instance.HideRegistrationForm();

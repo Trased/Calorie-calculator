@@ -38,7 +38,7 @@ namespace IP_PROJECT
         private UpdateProfileForm _updateProfileForm;
         private ViewHistoryForm _viewHistoryForm;
         private LogFoodForm _logFoodForm;
-
+        private IDatabaseManager databaseManager;
         /// <summary>
         /// Class constructor that initializes forms and shows the login form.
         /// </summary>
@@ -50,6 +50,7 @@ namespace IP_PROJECT
             _updateProfileForm = new UpdateProfileForm();   
             _viewHistoryForm = new ViewHistoryForm();
             _logFoodForm = new LogFoodForm();
+            databaseManager = DatabaseManager.Instance;
             ShowLogInForm();
         }
 
@@ -65,6 +66,14 @@ namespace IP_PROJECT
                     _instance = new FormManager();
                 }
                 return _instance;
+            }
+        }
+
+        public IDatabaseManager GetDbManager
+        {
+            get
+            {
+                return databaseManager;
             }
         }
 

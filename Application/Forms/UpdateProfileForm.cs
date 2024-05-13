@@ -89,7 +89,7 @@ namespace IP_PROJECT
                     MessageBox.Show("New passwords do not match.")          ;
                     return;
                 }
-                DatabaseManager.Instance.CheckPassword(passwordBox.Text, newPassword0Box.Text);
+                FormManager.Instance.GetDbManager.CheckPassword(passwordBox.Text, newPassword0Box.Text);
 
                 passwordBox.Text = "";
                 newPassword0Box.Text = "";
@@ -100,7 +100,7 @@ namespace IP_PROJECT
             {
                 if (!(!int.TryParse(ageBox.Text, out int age) || age <= 1))
                 {
-                    DatabaseManager.Instance.UpdateProfileField("age", age);
+                    FormManager.Instance.GetDbManager.UpdateProfileField("age", age);
                     MessageBox.Show("Age updated successfully!");
                 }
             }
@@ -109,7 +109,7 @@ namespace IP_PROJECT
             {
                 if (!(!double.TryParse(currentWeightBox.Text, out double weight) || weight <= 1.0))
                 {
-                    DatabaseManager.Instance.UpdateProfileField("weight", weight);
+                    FormManager.Instance.GetDbManager.UpdateProfileField("weight", weight);
                     MessageBox.Show("Weight updated successfully!");
                 }
             }
@@ -118,7 +118,7 @@ namespace IP_PROJECT
             {
                 if (!(!int.TryParse(currentHeightBox.Text, out int height) || height <= 1))
                 {
-                    DatabaseManager.Instance.UpdateProfileField("height", height);
+                    FormManager.Instance.GetDbManager.UpdateProfileField("height", height);
                     MessageBox.Show("Height updated successfully!");
                 }
             }

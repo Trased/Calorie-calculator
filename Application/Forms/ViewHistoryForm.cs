@@ -68,7 +68,7 @@ namespace IP_PROJECT
         /// <param name="e">Event arguments.</param>
         private void calorieHistoryButton_Click(object sender, EventArgs e)
         {
-            Dictionary<DateTime, double> caloriesPerDay = DatabaseManager.Instance.GetCaloriesConsumedPerDay();
+            Dictionary<DateTime, double> caloriesPerDay = FormManager.Instance.GetDbManager.GetCaloriesConsumedPerDay();
 
             progressChart.Series.Clear();
 
@@ -97,7 +97,7 @@ namespace IP_PROJECT
         /// <param name="e">Event arguments.</param>
         private void weightHistoryButton_Click(object sender, EventArgs e)
         {
-            List<(DateTime, double)> weightHistory = DatabaseManager.Instance.GetWeightHistory();
+            List<(DateTime, double)> weightHistory = FormManager.Instance.GetDbManager.GetWeightHistory();
             progressChart.Series.Clear();
 
             progressChart.Series.Add("Weight");

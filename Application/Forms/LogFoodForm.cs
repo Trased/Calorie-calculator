@@ -137,7 +137,7 @@ namespace IP_PROJECT
                     double fat = ParserManager.Instance.ParseDouble(nutritionParts[2]);
                     double protein = ParserManager.Instance.ParseDouble(nutritionParts[3]);
                     double carbo = ParserManager.Instance.ParseDouble(nutritionParts[4]);
-                    if(DatabaseManager.Instance.SaveFoodToDatabase(dateTimeInput.Value, name, calories,  servingSize, fat, protein, carbo))
+                    if(FormManager.Instance.GetDbManager.SaveFoodToDatabase(dateTimeInput.Value, name, calories,  servingSize, fat, protein, carbo))
                     {
                         MessageBox.Show("Food has been saved in the database!");
                     }
