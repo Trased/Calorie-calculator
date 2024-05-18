@@ -76,11 +76,11 @@ namespace IP_PROJECT
             // 
             this.dateTimeInput.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeInput.Location = new System.Drawing.Point(87, 159);
-            this.dateTimeInput.MaxDate = new System.DateTime(2024, 4, 24, 0, 0, 0, 0);
+            this.dateTimeInput.MaxDate = DateTime.Today;
             this.dateTimeInput.Name = "dateTimeInput";
             this.dateTimeInput.Size = new System.Drawing.Size(394, 35);
             this.dateTimeInput.TabIndex = 2;
-            this.dateTimeInput.Value = new System.DateTime(2024, 4, 21, 0, 0, 0, 0);
+            this.dateTimeInput.Value = DateTime.Today;
             // 
             // label1
             // 
