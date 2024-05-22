@@ -67,8 +67,7 @@ namespace ParserMgr
             string[] splitPart = part.Trim().Split(' '); // Split by space
             if (splitPart.Length > 1)
             {
-                double value;
-                if (double.TryParse(splitPart[0], out value))
+                if (double.TryParse(splitPart[0], out double value))
                 {
                     return value;
                 }
@@ -99,7 +98,7 @@ namespace ParserMgr
                         List<Nutrition> nutritionList = JsonConvert.DeserializeObject<List<Nutrition>>(responseBody);
                         foreach (Nutrition nutrition in nutritionList)
                         {
-                            string formattedResult = $"{nutrition.Name}: {nutrition.Calories} calories, {nutrition.Serving_size_g} g serving size, {nutrition.Fat_total_g} g fat, {nutrition.Protein_g} g protein, {nutrition.Carbohydrates_total_g} g carbohydrates";
+                            string formattedResult = $"{nutrition.Name}: {nutrition.Calories} calories, {nutrition.ServingSizeG} g serving size, {nutrition.FatG} g fat, {nutrition.ProteinG} g protein, {nutrition.CarbohydratesG} g carbohydrates";
                             formattedResults.Add(formattedResult);
                         }
                     }

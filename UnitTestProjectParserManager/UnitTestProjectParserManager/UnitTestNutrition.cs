@@ -42,10 +42,10 @@ namespace UnitTestProjectParserManager
             double expectedServingSize = 150;
 
             // Act
-            nutrition.Serving_size_g = expectedServingSize;
+            nutrition.ServingSizeG = expectedServingSize;
 
             // Assert
-            Assert.AreEqual(expectedServingSize, nutrition.Serving_size_g);
+            Assert.AreEqual(expectedServingSize, nutrition.ServingSizeG);
         }
 
         [TestMethod]
@@ -56,10 +56,10 @@ namespace UnitTestProjectParserManager
             double expectedFatTotal = 10.2;
 
             // Act
-            nutrition.Fat_total_g = expectedFatTotal;
+            nutrition.FatG = expectedFatTotal;
 
             // Assert
-            Assert.AreEqual(expectedFatTotal, nutrition.Fat_total_g);
+            Assert.AreEqual(expectedFatTotal, nutrition.FatG);
         }
 
         [TestMethod]
@@ -70,10 +70,10 @@ namespace UnitTestProjectParserManager
             double expectedProtein = 25.3;
 
             // Act
-            nutrition.Protein_g = expectedProtein;
+            nutrition.ProteinG = expectedProtein;
 
             // Assert
-            Assert.AreEqual(expectedProtein, nutrition.Protein_g);
+            Assert.AreEqual(expectedProtein, nutrition.ProteinG);
         }
 
         [TestMethod]
@@ -84,10 +84,10 @@ namespace UnitTestProjectParserManager
             double expectedCarbohydratesTotal = 30.7;
 
             // Act
-            nutrition.Carbohydrates_total_g = expectedCarbohydratesTotal;
+            nutrition.CarbohydratesG = expectedCarbohydratesTotal;
 
             // Assert
-            Assert.AreEqual(expectedCarbohydratesTotal, nutrition.Carbohydrates_total_g);
+            Assert.AreEqual(expectedCarbohydratesTotal, nutrition.CarbohydratesG);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace IpProiect
         {
             InitializeComponent();
             this.FormClosing += CloseApp;
-            this.KeyDown += UpdateProfileFormKeyDown;
+            this.KeyDown += updateProfileForm_KeyDown;
             DatabaseManager.Instance.OnUpdateProfileSuccess += HandleUpdateProfileSuccess;
         }
 
@@ -69,7 +69,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void BackToMainMenuButtonClick(object sender, EventArgs e)
+        private void backToMainMenuButton_Click(object sender, EventArgs e)
         {
             FormManager.Instance.HideUpdateProfileForm();
             FormManager.Instance.ShowMainForm();
@@ -80,7 +80,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void UpdateProfileButtonClick(object sender, EventArgs e)
+        private void updateProfileButton_Click(object sender, EventArgs e)
         { 
             if (!string.IsNullOrWhiteSpace(newPassword0Box.Text))
             {
@@ -130,7 +130,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void ExitToolStripMenuItemClick(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -142,7 +142,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the KeyEventArgs class that contains event data, including the keys that were pressed.</param>
-        private void UpdateProfileFormKeyDown(object sender, KeyEventArgs e)
+        private void updateProfileForm_KeyDown(object sender, KeyEventArgs e)
         {
             // Check if CTRL+X combination is pressed
             if (e.Control && e.KeyCode == Keys.X)
@@ -157,7 +157,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void DocumentationToolStripMenuItemClick(object sender, EventArgs e)
+        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }

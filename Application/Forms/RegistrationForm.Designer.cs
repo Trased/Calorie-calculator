@@ -181,7 +181,7 @@
             this.registerButton.TabIndex = 16;
             this.registerButton.Text = "Register";
             this.registerButton.UseVisualStyleBackColor = true;
-            this.registerButton.Click += new System.EventHandler(this.RegisterButtonClick);
+            this.registerButton.Click += new System.EventHandler(this.registerButton_Click);
             // 
             // logInButtton
             // 
@@ -192,7 +192,7 @@
             this.logInButtton.TabIndex = 17;
             this.logInButtton.Text = "Back to log in";
             this.logInButtton.UseVisualStyleBackColor = true;
-            this.logInButtton.Click += new System.EventHandler(this.LogInButttonClick);
+            this.logInButtton.Click += new System.EventHandler(this.logInButtton_Click);
             // 
             // genderBox
             // 
@@ -309,7 +309,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -331,7 +331,7 @@
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
             this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
-            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItemClick);
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
             // 
             // RegistrationForm
             // 

@@ -59,7 +59,7 @@ namespace IpProiect
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.SearchButtonClick);
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
             // proceedButton
             // 
@@ -70,7 +70,7 @@ namespace IpProiect
             this.proceedButton.TabIndex = 1;
             this.proceedButton.Text = "Proceed";
             this.proceedButton.UseVisualStyleBackColor = true;
-            this.proceedButton.Click += new System.EventHandler(this.ProceedButtonClick);
+            this.proceedButton.Click += new System.EventHandler(this.proceedButton_Click);
             // 
             // dateTimeInput
             // 
@@ -157,7 +157,7 @@ namespace IpProiect
             this.backToMainMenuButton.TabIndex = 11;
             this.backToMainMenuButton.Text = "Back to main menu";
             this.backToMainMenuButton.UseVisualStyleBackColor = true;
-            this.backToMainMenuButton.Click += new System.EventHandler(this.BackToMainMenuButtonClick);
+            this.backToMainMenuButton.Click += new System.EventHandler(this.backToMainMenuButton_Click);
             // 
             // progMenu
             // 
@@ -192,7 +192,7 @@ namespace IpProiect
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -214,7 +214,7 @@ namespace IpProiect
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
             this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
-            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItemClick);
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
             // 
             // LogFoodForm
             // 

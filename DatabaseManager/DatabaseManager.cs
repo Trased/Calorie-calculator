@@ -28,10 +28,11 @@ namespace DBMgr
     public class DatabaseManager : IDatabaseManager
     {
         private static DatabaseManager _instance;
+        private const string _connectionString = "Data Source=calorie_calculator.db;Version=3;";
+
         public event EventHandler<EventArgs> OnLoginSuccess;
         public event EventHandler<EventArgs> OnUpdateProfileSuccess;
         public event EventHandler<string> OnMessageBox;
-        private const string _connectionString = "Data Source=calorie_calculator.db;Version=3;";
 
         /// <summary>
         /// Private default class constructor required for Singleton

@@ -21,6 +21,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Newtonsoft.Json;
 
 namespace ParserMgr
 {
@@ -29,31 +30,37 @@ namespace ParserMgr
         /// <summary>
         /// Name of the food item.
         /// </summary>
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Calories per serving of the food item.
         /// </summary>
+        [JsonProperty("calories")]
         public double Calories { get; set; }
 
         /// <summary>
         /// Serving size in grams of the food item.
         /// </summary>
-        public double Serving_size_g { get; set; }
+        [JsonProperty("serving_size_g")]
+        public double ServingSizeG { get; set; }
 
         /// <summary>
         /// Total fat content in grams of the food item.
         /// </summary>
-        public double Fat_total_g { get; set; }
+        [JsonProperty("fat_total_g")]
+        public double FatG { get; set; }
 
         /// <summary>
         /// Protein content in grams of the food item.
         /// </summary>
-        public double Protein_g { get; set; }
+        [JsonProperty("protein_g")]
+        public double ProteinG { get; set; }
 
         /// <summary>
         /// Total carbohydrates content in grams of the food item.
         /// </summary>
-        public double Carbohydrates_total_g { get; set; }
+        [JsonProperty("carbohydrates_total_g")]
+        public double CarbohydratesG { get; set; }
     }
 }

@@ -37,7 +37,7 @@ namespace IpProiect
         {
             InitializeComponent();
             this.FormClosing += CloseApp;
-            this.KeyDown += ViewHistoryFormKeyDown;
+            this.KeyDown += viewHistoryForm_KeyDown;
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void BackToMainMenuButtonClick(object sender, EventArgs e)
+        private void backToMainMenuButton_Click(object sender, EventArgs e)
         {
             FormManager.Instance.HideViewHistoryForm();
             FormManager.Instance.ShowMainForm();
@@ -66,7 +66,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void CalorieHistoryButtonClick(object sender, EventArgs e)
+        private void calorieHistoryButton_Click(object sender, EventArgs e)
         {
             Dictionary<DateTime, double> caloriesPerDay = FormManager.Instance.GetDbManager.GetCaloriesConsumedPerDay();
 
@@ -95,7 +95,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void WeightHistoryButtonClick(object sender, EventArgs e)
+        private void weightHistoryButton_Click(object sender, EventArgs e)
         {
             List<(DateTime, double)> weightHistory = FormManager.Instance.GetDbManager.GetWeightHistory();
             progressChart.Series.Clear();
@@ -143,7 +143,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the KeyEventArgs class that contains event data, including the keys that were pressed.</param>
-        private void ViewHistoryFormKeyDown(object sender, KeyEventArgs e)
+        private void viewHistoryForm_KeyDown(object sender, KeyEventArgs e)
         {
             // Check if CTRL+X combination is pressed
             if (e.Control && e.KeyCode == Keys.X)
@@ -158,7 +158,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void DocumentationToolStripMenuItemClick(object sender, EventArgs e)
+        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }
