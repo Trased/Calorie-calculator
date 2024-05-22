@@ -76,11 +76,11 @@ namespace IpProiect
             // 
             this.dateTimeInput.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimeInput.Location = new System.Drawing.Point(87, 159);
-            this.dateTimeInput.MaxDate = DateTime.Today;
+            this.dateTimeInput.MaxDate = new System.DateTime(2024, 5, 22, 0, 0, 0, 0);
             this.dateTimeInput.Name = "dateTimeInput";
             this.dateTimeInput.Size = new System.Drawing.Size(394, 35);
             this.dateTimeInput.TabIndex = 2;
-            this.dateTimeInput.Value = DateTime.Today;
+            this.dateTimeInput.Value = new System.DateTime(2024, 5, 22, 0, 0, 0, 0);
             // 
             // label1
             // 
@@ -208,6 +208,7 @@ namespace IpProiect
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
             this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
             // documentationToolStripMenuItem
             // 

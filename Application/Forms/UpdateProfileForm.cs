@@ -166,5 +166,10 @@ namespace IpProiect
             FormManager.Instance.HideUpdateProfileForm();
             FormManager.Instance.ShowMainForm();
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

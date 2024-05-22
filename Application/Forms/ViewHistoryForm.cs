@@ -162,5 +162,10 @@ namespace IpProiect
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
