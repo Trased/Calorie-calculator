@@ -10,7 +10,7 @@ namespace UnitTestProjectDatabaseManager
     public class UnitTestDatabaseManager
     {
         [TestMethod]
-        public void DatabaseManager_Instance_IsSingleton()
+        public void DatabaseManagerInstanceIsSingleton()
         {
             // Arrange
             var instance1 = DatabaseManager.Instance;
@@ -48,7 +48,7 @@ namespace UnitTestProjectDatabaseManager
         }
 
         [TestMethod]
-        public void LogIn_Throws_SQLiteException_Test()
+        public void LogInThrowsSQLiteExceptionTest()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();
@@ -60,7 +60,7 @@ namespace UnitTestProjectDatabaseManager
         }
 
         [TestMethod]
-        public void LogIn_Throws_Other_Exception_Test()
+        public void LogInThrowsOtherExceptionTest()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();
@@ -85,7 +85,7 @@ namespace UnitTestProjectDatabaseManager
             mock.Verify(x => x.Register("John", "Doe", 30, "Male", 180, 75.5, "johndoe", "password"), Times.Once);
         }
         [TestMethod]
-        public void Register_Throws_SQLiteException_Test()
+        public void RegisterThrowsSQLiteExceptionTest()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();
@@ -97,7 +97,7 @@ namespace UnitTestProjectDatabaseManager
         }
 
         [TestMethod]
-        public void Register_Throws_Other_Exception_Test()
+        public void RegisterThrowsOtherExceptionTest()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();
@@ -109,7 +109,7 @@ namespace UnitTestProjectDatabaseManager
         }
 
         [TestMethod]
-        public void IsUsernameTakenTest_ReturnFalse()
+        public void IsUsernameTakenTestReturnFalse()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();
@@ -123,7 +123,7 @@ namespace UnitTestProjectDatabaseManager
         }
 
         [TestMethod]
-        public void IsUsernameTakenTest_ReturnTrue()
+        public void IsUsernameTakenTestReturnTrue()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();
@@ -137,7 +137,7 @@ namespace UnitTestProjectDatabaseManager
         }
 
         [TestMethod]
-        public void IsUsernameTaken_Throws_SQLiteException_Test()
+        public void IsUsernameTakenThrowsSQLiteExceptionTest()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();
@@ -149,7 +149,7 @@ namespace UnitTestProjectDatabaseManager
         }
 
         [TestMethod]
-        public void IsUsernameTaken_Throws_Other_Exception_Test()
+        public void IsUsernameTakenThrowsOtherExceptionTest()
         {
             // Arrange
             var mock = new Mock<IDatabaseManager>();

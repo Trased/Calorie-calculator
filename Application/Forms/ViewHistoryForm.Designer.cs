@@ -1,4 +1,4 @@
-﻿namespace IP_PROJECT
+﻿namespace IpProiect
 {
     partial class ViewHistoryForm
     {
@@ -55,7 +55,7 @@
             this.calorieHistoryButton.TabIndex = 0;
             this.calorieHistoryButton.Text = "Calorie history";
             this.calorieHistoryButton.UseVisualStyleBackColor = true;
-            this.calorieHistoryButton.Click += new System.EventHandler(this.calorieHistoryButton_Click);
+            this.calorieHistoryButton.Click += new System.EventHandler(this.CalorieHistoryButtonClick);
             // 
             // weightHistoryButton
             // 
@@ -66,7 +66,7 @@
             this.weightHistoryButton.TabIndex = 1;
             this.weightHistoryButton.Text = "Weight history";
             this.weightHistoryButton.UseVisualStyleBackColor = true;
-            this.weightHistoryButton.Click += new System.EventHandler(this.weightHistoryButton_Click);
+            this.weightHistoryButton.Click += new System.EventHandler(this.WeightHistoryButtonClick);
             // 
             // backToMainMenuButton
             // 
@@ -77,7 +77,7 @@
             this.backToMainMenuButton.TabIndex = 2;
             this.backToMainMenuButton.Text = "Back to main menu";
             this.backToMainMenuButton.UseVisualStyleBackColor = true;
-            this.backToMainMenuButton.Click += new System.EventHandler(this.backToMainMenuButton_Click);
+            this.backToMainMenuButton.Click += new System.EventHandler(this.BackToMainMenuButtonClick);
             // 
             // progressChart
             // 
@@ -129,7 +129,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 
             // helpToolStripMenuItem
             // 
@@ -151,7 +151,7 @@
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
             this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
-            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItemClick);
             // 
             // ViewHistoryForm
             // 

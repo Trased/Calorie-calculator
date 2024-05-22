@@ -7,7 +7,7 @@ namespace UnitTestProjectStrategy
     public class CalorieIntakeCalculatorTests
     {
         [TestMethod]
-        public void CalculateRecommendedCalorie_ForMale_ReturnsCorrectValue()
+        public void CalculateRecommendedCalorieForMaleReturnsCorrectValue()
         {
             // Arrange
             var calculator = new CalorieIntakeCalculator(new MaleCalorieIntake());
@@ -24,7 +24,7 @@ namespace UnitTestProjectStrategy
         }
 
         [TestMethod]
-        public void CalculateRecommendedCalorie_ForFemale_ReturnsCorrectValue()
+        public void CalculateRecommendedCalorieForFemaleReturnsCorrectValue()
         {
             // Arrange
             var calculator = new CalorieIntakeCalculator(new FemaleCalorieIntake());
@@ -45,7 +45,7 @@ namespace UnitTestProjectStrategy
     public class MaleCalorieIntakeTests
     {
         [TestMethod]
-        public void CalculateRecommendedCalorieIntake_ReturnsCorrectValue()
+        public void CalculateRecommendedCalorieIntakeReturnsCorrectValue()
         {
             // Arrange
             var maleCalorieIntake = new MaleCalorieIntake();
@@ -66,7 +66,7 @@ namespace UnitTestProjectStrategy
     public class FemaleCalorieIntakeTests
     {
         [TestMethod]
-        public void CalculateRecommendedCalorieIntake_ReturnsCorrectValue()
+        public void CalculateRecommendedCalorieIntakeReturnsCorrectValue()
         {
             // Arrange
             var femaleCalorieIntake = new FemaleCalorieIntake();

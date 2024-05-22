@@ -1,4 +1,4 @@
-﻿namespace IP_PROJECT
+﻿namespace IpProiect
 {
     partial class MainForm
     {
@@ -52,7 +52,7 @@
             this.logFoodButton.TabIndex = 0;
             this.logFoodButton.Text = "Log food";
             this.logFoodButton.UseVisualStyleBackColor = true;
-            this.logFoodButton.Click += new System.EventHandler(this.logFoodButton_Click);
+            this.logFoodButton.Click += new System.EventHandler(this.LogFoodButtonClick);
             // 
             // viewHistoryButton
             // 
@@ -64,7 +64,7 @@
             this.viewHistoryButton.TabIndex = 1;
             this.viewHistoryButton.Text = "View history";
             this.viewHistoryButton.UseVisualStyleBackColor = true;
-            this.viewHistoryButton.Click += new System.EventHandler(this.viewHistoryButton_Click);
+            this.viewHistoryButton.Click += new System.EventHandler(this.ViewHistoryButtonClick);
             // 
             // updateProfileButton
             // 
@@ -76,7 +76,7 @@
             this.updateProfileButton.TabIndex = 2;
             this.updateProfileButton.Text = "Update profile";
             this.updateProfileButton.UseVisualStyleBackColor = true;
-            this.updateProfileButton.Click += new System.EventHandler(this.updateProfileButton_Click);
+            this.updateProfileButton.Click += new System.EventHandler(this.UpdateProfileButtonClick);
             // 
             // logOutButton
             // 
@@ -88,7 +88,7 @@
             this.logOutButton.TabIndex = 3;
             this.logOutButton.Text = "Log out";
             this.logOutButton.UseVisualStyleBackColor = true;
-            this.logOutButton.Click += new System.EventHandler(this.logOutButton_Click);
+            this.logOutButton.Click += new System.EventHandler(this.LogOutButtonClick);
             // 
             // progMenu
             // 
@@ -123,7 +123,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 
             // helpToolStripMenuItem
             // 
@@ -145,7 +145,7 @@
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
             this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
-            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItemClick);
             // 
             // MainForm
             // 

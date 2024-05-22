@@ -39,7 +39,7 @@ namespace UnitTestProjectParserManager
     public class ParserManagerTests
     {
         [TestMethod]
-        public void ParseDouble_ValidInput_ReturnsParsedValue()
+        public void ParseDoubleValidInputReturnsParsedValue()
         {
             // Arrange
             var parserManager = ParserManager.Instance;
@@ -55,7 +55,7 @@ namespace UnitTestProjectParserManager
 
         [TestMethod]
         [ExpectedException(typeof(ArgumentException))]
-        public void ParseDouble_InvalidInput_ThrowsArgumentException()
+        public void ParseDoubleInvalidInputThrowsArgumentException()
         {
             // Arrange
             var parserManager = ParserManager.Instance;
@@ -69,7 +69,7 @@ namespace UnitTestProjectParserManager
         }
         [TestMethod]
 
-        public async Task ParseSearch_ValidQuery_ReturnsFormattedResults()
+        public async Task ParseSearchValidQueryReturnsFormattedResults()
         {
             // Arrange
             string query = "apple";
@@ -83,7 +83,7 @@ namespace UnitTestProjectParserManager
         }
 
         [TestMethod]
-        public async Task ParseSearch_InvalidQuery_ReturnsEmptyList()
+        public async Task ParseSearchInvalidQueryReturnsEmptyList()
         {
             // Arrange
             string query = "";
@@ -98,7 +98,7 @@ namespace UnitTestProjectParserManager
 
         [TestMethod]
 
-        public async Task ParseSearch_ValidQuery_ReturnsCorrectProperties()
+        public async Task ParseSearchValidQueryReturnsCorrectProperties()
         {
             // Arrange
             string query = "apple";

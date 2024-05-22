@@ -25,7 +25,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IP_PROJECT
+namespace IpProiect
 {
     public partial class MainForm : Form
     {
@@ -36,7 +36,7 @@ namespace IP_PROJECT
         {
             InitializeComponent();
             this.FormClosing += CloseApp;
-            this.KeyDown += MainForm_KeyDown;
+            this.KeyDown += MainFormKeyDown;
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void logFoodButton_Click(object sender, EventArgs e)
+        private void LogFoodButtonClick(object sender, EventArgs e)
         {
             FormManager.Instance.HideMainForm();
             FormManager.Instance.ShowLogFoodForm();
@@ -65,7 +65,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void viewHistoryButton_Click(object sender, EventArgs e)
+        private void ViewHistoryButtonClick(object sender, EventArgs e)
         {
             FormManager.Instance.HideMainForm();
             FormManager.Instance.ShowViewHistoryForm();
@@ -76,7 +76,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void updateProfileButton_Click(object sender, EventArgs e)
+        private void UpdateProfileButtonClick(object sender, EventArgs e)
         {
             FormManager.Instance.HideMainForm();
             FormManager.Instance.ShowUpdateProfileForm();
@@ -87,7 +87,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void logOutButton_Click(object sender, EventArgs e)
+        private void LogOutButtonClick(object sender, EventArgs e)
         {
             FormManager.Instance.HideMainForm();
             FormManager.Instance.ShowLogInForm();
@@ -99,7 +99,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItemClick(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -111,7 +111,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the KeyEventArgs class that contains event data, including the keys that were pressed.</param>
-        private void MainForm_KeyDown(object sender, KeyEventArgs e)
+        private void MainFormKeyDown(object sender, KeyEventArgs e)
         {
             // Check if CTRL+X combination is pressed
             if (e.Control && e.KeyCode == Keys.X)
@@ -126,7 +126,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DocumentationToolStripMenuItemClick(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }

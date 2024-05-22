@@ -22,7 +22,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace IP_PROJECT
+namespace IpProiect
 {
     internal static class Program
     {

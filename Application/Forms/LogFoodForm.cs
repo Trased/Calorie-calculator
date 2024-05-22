@@ -31,7 +31,7 @@ using Newtonsoft.Json;
 using Strategy;
 using ParserMgr;
 using DBMgr;
-namespace IP_PROJECT
+namespace IpProiect
 {
     public partial class LogFoodForm : Form
     {
@@ -43,7 +43,7 @@ namespace IP_PROJECT
             InitializeComponent();
             this.FormClosing += CloseApp;
 
-            this.KeyDown += LogFoodForm_KeyDown;
+            this.KeyDown += LogFoodFormKeyDown;
             DatabaseManager.Instance.OnLoginSuccess += HandleLoginSuccess;
             DatabaseManager.Instance.OnMessageBox += HandleMessageBox;
             ParserManager.Instance.OnMessageBox += HandleMessageBox;
@@ -89,7 +89,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void backToMainMenuButton_Click(object sender, EventArgs e)
+        private void BackToMainMenuButtonClick(object sender, EventArgs e)
         {
             FormManager.Instance.HideLogFoodForm();
             FormManager.Instance.ShowMainForm();
@@ -100,7 +100,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private async void searchButton_Click(object sender, EventArgs e)
+        private async void SearchButtonClick(object sender, EventArgs e)
         {
             if (!string.IsNullOrWhiteSpace(foodSearchBox.Text))
             {
@@ -122,7 +122,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void proceedButton_Click(object sender, EventArgs e)
+        private void ProceedButtonClick(object sender, EventArgs e)
         {
             if(searchOutputBox.SelectedIndex != -1)
             {
@@ -155,7 +155,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItemClick(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -167,7 +167,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the KeyEventArgs class that contains event data, including the keys that were pressed.</param>
-        private void LogFoodForm_KeyDown(object sender, KeyEventArgs e)
+        private void LogFoodFormKeyDown(object sender, KeyEventArgs e)
         {
             // Check if CTRL+X combination is pressed
             if (e.Control && e.KeyCode == Keys.X)
@@ -182,7 +182,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DocumentationToolStripMenuItemClick(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }

@@ -1,4 +1,4 @@
-﻿namespace IP_PROJECT
+﻿namespace IpProiect
 {
     partial class UpdateProfileForm
     {
@@ -221,7 +221,7 @@
             this.backToMainMenuButton.TabIndex = 34;
             this.backToMainMenuButton.Text = "Back to main menu";
             this.backToMainMenuButton.UseVisualStyleBackColor = true;
-            this.backToMainMenuButton.Click += new System.EventHandler(this.backToMainMenuButton_Click);
+            this.backToMainMenuButton.Click += new System.EventHandler(this.BackToMainMenuButtonClick);
             // 
             // updateProfileButton
             // 
@@ -232,7 +232,7 @@
             this.updateProfileButton.TabIndex = 35;
             this.updateProfileButton.Text = "Update profile";
             this.updateProfileButton.UseVisualStyleBackColor = true;
-            this.updateProfileButton.Click += new System.EventHandler(this.updateProfileButton_Click);
+            this.updateProfileButton.Click += new System.EventHandler(this.UpdateProfileButtonClick);
             // 
             // progMenu
             // 
@@ -267,7 +267,7 @@
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 
             // helpToolStripMenuItem
             // 
@@ -281,15 +281,15 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.aboutToolStripMenuItem.Text = "About";
             // 
             // documentationToolStripMenuItem
             // 
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
-            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.documentationToolStripMenuItem.Size = new System.Drawing.Size(157, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
-            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItemClick);
             // 
             // UpdateProfileForm
             // 

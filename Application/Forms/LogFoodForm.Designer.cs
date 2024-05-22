@@ -1,5 +1,5 @@
 ﻿using System;
-namespace IP_PROJECT
+namespace IpProiect
 {
     partial class LogFoodForm
     {
@@ -59,7 +59,7 @@ namespace IP_PROJECT
             this.searchButton.TabIndex = 0;
             this.searchButton.Text = "Search";
             this.searchButton.UseVisualStyleBackColor = true;
-            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            this.searchButton.Click += new System.EventHandler(this.SearchButtonClick);
             // 
             // proceedButton
             // 
@@ -70,7 +70,7 @@ namespace IP_PROJECT
             this.proceedButton.TabIndex = 1;
             this.proceedButton.Text = "Proceed";
             this.proceedButton.UseVisualStyleBackColor = true;
-            this.proceedButton.Click += new System.EventHandler(this.proceedButton_Click);
+            this.proceedButton.Click += new System.EventHandler(this.ProceedButtonClick);
             // 
             // dateTimeInput
             // 
@@ -157,7 +157,7 @@ namespace IP_PROJECT
             this.backToMainMenuButton.TabIndex = 11;
             this.backToMainMenuButton.Text = "Back to main menu";
             this.backToMainMenuButton.UseVisualStyleBackColor = true;
-            this.backToMainMenuButton.Click += new System.EventHandler(this.backToMainMenuButton_Click);
+            this.backToMainMenuButton.Click += new System.EventHandler(this.BackToMainMenuButtonClick);
             // 
             // progMenu
             // 
@@ -192,7 +192,7 @@ namespace IP_PROJECT
             this.exitToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
             this.exitToolStripMenuItem.Text = "Exit";
-            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 
             // helpToolStripMenuItem
             // 
@@ -214,7 +214,7 @@ namespace IP_PROJECT
             this.documentationToolStripMenuItem.Name = "documentationToolStripMenuItem";
             this.documentationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.documentationToolStripMenuItem.Text = "Documentation";
-            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.documentationToolStripMenuItem_Click);
+            this.documentationToolStripMenuItem.Click += new System.EventHandler(this.DocumentationToolStripMenuItemClick);
             // 
             // LogFoodForm
             // 

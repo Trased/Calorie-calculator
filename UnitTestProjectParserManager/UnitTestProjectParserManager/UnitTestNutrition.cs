@@ -7,7 +7,7 @@ namespace UnitTestProjectParserManager
     public class UnitTestNutrition
     {
         [TestMethod]
-        public void Nutrition_Name_SetCorrectly()
+        public void NutritionNameSetCorrectly()
         {
             // Arrange
             var nutrition = new Nutrition();
@@ -21,7 +21,7 @@ namespace UnitTestProjectParserManager
         }
 
         [TestMethod]
-        public void Nutrition_Calories_SetCorrectly()
+        public void NutritionCaloriesSetCorrectly()
         {
             // Arrange
             var nutrition = new Nutrition();
@@ -35,7 +35,7 @@ namespace UnitTestProjectParserManager
         }
 
         [TestMethod]
-        public void Nutrition_ServingSize_SetCorrectly()
+        public void NutritionServingSizeSetCorrectly()
         {
             // Arrange
             var nutrition = new Nutrition();
@@ -49,7 +49,7 @@ namespace UnitTestProjectParserManager
         }
 
         [TestMethod]
-        public void Nutrition_FatTotal_SetCorrectly()
+        public void NutritionFatTotalSetCorrectly()
         {
             // Arrange
             var nutrition = new Nutrition();
@@ -63,7 +63,7 @@ namespace UnitTestProjectParserManager
         }
 
         [TestMethod]
-        public void Nutrition_Protein_SetCorrectly()
+        public void NutritionProteinSetCorrectly()
         {
             // Arrange
             var nutrition = new Nutrition();
@@ -77,7 +77,7 @@ namespace UnitTestProjectParserManager
         }
 
         [TestMethod]
-        public void Nutrition_CarbohydratesTotal_SetCorrectly()
+        public void NutritionCarbohydratesTotalSetCorrectly()
         {
             // Arrange
             var nutrition = new Nutrition();

@@ -8,7 +8,7 @@ namespace UnitTestProjectDBManager
     public class UserDataTests
     {
         [TestMethod]
-        public void UserData_Instance_IsSingleton()
+        public void UserDataInstanceIsSingleton()
         {
             // Arrange
             var instance1 = UserData.Instance;
@@ -19,7 +19,7 @@ namespace UnitTestProjectDBManager
         }
 
         [TestMethod]
-        public void UserData_Properties_CanBeSetAndGet()
+        public void UserDataPropertiesCanBeSetAndGet()
         {
             // Arrange
             var userData = UserData.Instance;
@@ -42,7 +42,7 @@ namespace UnitTestProjectDBManager
         }
 
         [TestMethod]
-        public void CalculatePasswordSHA_ReturnsCorrectHash()
+        public void CalculatePasswordSHAReturnsCorrectHash()
         {
             // Arrange
             var userData = UserData.Instance;
@@ -57,7 +57,7 @@ namespace UnitTestProjectDBManager
         }
 
         [TestMethod]
-        public void InitializeUserDataOnLogIn_SetsUserDataCorrectly()
+        public void InitializeUserDataOnLogInSetsUserDataCorrectly()
         {
             // Arrange
             var userData = UserData.Instance;

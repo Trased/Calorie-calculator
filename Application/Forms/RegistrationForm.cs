@@ -27,7 +27,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 using DBMgr;
-namespace IP_PROJECT
+namespace IpProiect
 {
     public partial class RegistrationForm : Form
     {
@@ -38,7 +38,7 @@ namespace IP_PROJECT
         {
             InitializeComponent();
             this.FormClosing += CloseApp;
-            this.KeyDown += RegistrationForm_KeyDown;
+            this.KeyDown += RegistrationFormKeyDown;
         }
 
         /// <summary>
@@ -71,7 +71,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void logInButtton_Click(object sender, EventArgs e)
+        private void LogInButttonClick(object sender, EventArgs e)
         {
             FormManager.Instance.HideRegistrationForm();
             FormManager.Instance.ShowLogInForm();
@@ -82,7 +82,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">Event sender.</param>
         /// <param name="e">Event arguments.</param>
-        private void registerButton_Click(object sender, EventArgs e)
+        private void RegisterButtonClick(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(firstNameBox.Text) || !IsOnlyLetters(firstNameBox.Text))
             {
@@ -165,7 +165,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ExitToolStripMenuItemClick(object sender, EventArgs e)
         {
             Application.Exit();
         }
@@ -177,7 +177,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the KeyEventArgs class that contains event data, including the keys that were pressed.</param>
-        private void RegistrationForm_KeyDown(object sender, KeyEventArgs e)
+        private void RegistrationFormKeyDown(object sender, KeyEventArgs e)
         {
             // Check if CTRL+X combination is pressed
             if (e.Control && e.KeyCode == Keys.X)
@@ -192,7 +192,7 @@ namespace IP_PROJECT
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void documentationToolStripMenuItem_Click(object sender, EventArgs e)
+        private void DcumentationToolStripMenuItemClick(object sender, EventArgs e)
         {
             Help.ShowHelp(this, "calorie_calculator_documentation.chm");
         }

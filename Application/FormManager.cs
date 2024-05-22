@@ -23,7 +23,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 
-namespace IP_PROJECT
+namespace IpProiect
 {
     /// <summary>
     /// Singleton class for managing form display.
@@ -39,6 +39,7 @@ namespace IP_PROJECT
         private ViewHistoryForm _viewHistoryForm;
         private LogFoodForm _logFoodForm;
         private IDatabaseManager databaseManager;
+
         /// <summary>
         /// Class constructor that initializes forms and shows the login form.
         /// </summary>
@@ -69,6 +70,9 @@ namespace IP_PROJECT
             }
         }
 
+        /// <summary>
+        /// Singleton instance accessor.
+        /// </summary>
         public IDatabaseManager GetDbManager
         {
             get
