@@ -42,8 +42,7 @@ namespace IpProiect
         {
             InitializeComponent();
             this.FormClosing += CloseApp;
-
-            this.KeyDown += LogFoodFormKeyDown;
+            this.KeyDown += logFoodForm_KeyDown;
             DatabaseManager.Instance.OnLoginSuccess += HandleLoginSuccess;
             DatabaseManager.Instance.OnMessageBox += HandleMessageBox;
             ParserManager.Instance.OnMessageBox += HandleMessageBox;

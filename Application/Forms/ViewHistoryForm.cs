@@ -131,7 +131,7 @@ namespace IpProiect
         /// </summary>
         /// <param name="sender">The object that raised the event.</param>
         /// <param name="e">An instance of the EventArgs class that contains event data.</param>
-        private void ExitToolStripMenuItemClick(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
         }
