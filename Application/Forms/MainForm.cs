@@ -133,7 +133,7 @@ namespace IpProiect
 
         private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Help.ShowHelp(this, "user_manual.chm");
         }
     }
 }
